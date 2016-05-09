@@ -46,7 +46,7 @@ $this->end();
                                             <?php
                                             echo $this->Html->link('<i class = "fa fa-gear"></i>', array('controller' => 'stores', 'action' => 'admin_store_presentation', $r['Restaurent']['id']), array('escape' => FALSE, 'class' => 'btn btn-primary'));
                                             echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-trash-o"></i>', array('controller' => 'restaurents', 'action' => 'delete', $r["Restaurent"]["id"]), array('class' => 'btn btn-default', 'escape' => false, 'confirm' => __('Are you sure you want to delete this Restaurent?')));
-                                            echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-pencil"></i>', array('controller' => 'restaurents', 'action' => 'admin_manage', $r["Restaurent"]["id"]), array('class' => 'btn btn-info', 'escape' => false));
+                                            echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-pencil"></i>', array('controller' => 'restaurents', 'action' => 'admin_edit', $r["Restaurent"]["id"]), array('class' => 'btn btn-info', 'escape' => false));
                                             ?>
                                         </td> 
                                     </tr>
@@ -93,7 +93,7 @@ endif;
             var $el = $(data.el)
                     , value = data.value;
             var pk = $(this).attr('data-id');
-            var url = '<?php echo SITE_URL; ?>admin/stores/change_status';
+            var url = '<?php echo SITE_URL; ?>admin/restaurents/restaurent_status_change';
             if (value == false) {
                 val = 0;
             } else {

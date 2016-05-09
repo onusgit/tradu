@@ -78,12 +78,12 @@
 	<div class="portlet">
 	    <div class="portlet-header">
 		<div class="caption">
-		    <?php echo __('Add New Restaurent'); ?>
+		    <?php echo __('Update Restaurent'); ?>
 		</div>
 		<div class="tools"><i class="fa fa-chevron-up"></i></div>
 	    </div>
 	    <div class="portlet-body">    
-		<?php echo $this->Form->create('Restaurent', array('id' => 'add_store', 'class' => 'form-horizontal', 'enctype' => 'multipart/form-data'));?>
+		<?php echo $this->Form->create('Restaurent', array('id' => 'update_store', 'class' => 'form-horizontal', 'enctype' => 'multipart/form-data'));?>
 		<div class="row">
 		    <div class="col-lg-12">
 			<div class="col-sm-4">
@@ -92,6 +92,7 @@
 			<div class="col-sm-4 padding-0">
 			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Name'); ?><span class="require">*</span></label>
 				<div class="col-lg-9">
+				    <?php echo $this->Form->input('id', array('type' => 'hidden', 'class' => 'form-control required', 'label' => FALSE, 'div' => FALSE, 'placeholder' => '')); ?>
 				    <?php echo $this->Form->input('name', array('class' => 'form-control required', 'label' => FALSE, 'div' => FALSE, 'placeholder' => '')); ?>
 				</div>
 			    </div>		                                
@@ -115,11 +116,6 @@
 				    <?php echo $this->Form->input('country', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'country', 'div' => FALSE, 'placeholder' => '', 'options' => $countries)); ?>
 				</div>
 			    </div>
-<!--			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
-				<div class="col-lg-9">
-				    <?php echo $this->Form->file('image', array('class' => 'form-control', 'label' => FALSE, 'id' => 'image', 'div' => FALSE, 'placeholder' => '')); ?>
-				</div>
-			    </div>-->
 			</div>
 			<div class="col-sm-4"> 
 			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Email'); ?></label>

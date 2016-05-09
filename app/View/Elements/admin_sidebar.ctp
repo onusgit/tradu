@@ -31,7 +31,8 @@
         </li>
        
             <li class="sidebar-heading"><h4><?php echo __('Restaurents'); ?></h4></li>           
-            <li><?php echo $this->Html->link('<i class="fa fa-home fa-fw"></i><span class="menu-title">' . __('Home'), array('controller' => 'restaurents', 'action' => 'admin_home'), array('escape' => false)); ?></li>            
+            <li><?php echo $this->Html->link('<i class="fa fa-home fa-fw"></i><span class="menu-title">' . __('Home'), array('controller' => 'restaurents', 'action' => 'admin_index'), array('escape' => false)); ?></li>            
+            <li><?php echo $this->Html->link('<i class="fa fa-plus fa-fw"></i><span class="menu-title">' . __('Add New Restaurents'), array('controller' => 'restaurents', 'action' => 'admin_add'), array('escape' => false)); ?></li>            
        
         <?php if($login_user_group_id == 1): ?>
             <li class="sidebar-heading"><h4><?php echo __('Enquiries'); ?></h4></li>    
