@@ -12,7 +12,7 @@ $this->end();
                 </div>
                 <div class="tools">
                     <?php
-                        echo $this->Html->link('Add Restaurent', array('controller' => 'restaurents', 'action' => 'admin_add'), array('class' => 'btn btn-primary', 'title' => __('Create New Restaurent'), 'escape' => false));                    	    
+                    echo $this->Html->link('Add Restaurent', array('controller' => 'restaurents', 'action' => 'admin_add'), array('class' => 'btn btn-primary', 'title' => __('Create New Restaurent'), 'escape' => false));
                     ?>                    
                 </div>
             </div>
@@ -35,6 +35,14 @@ $this->end();
                                 foreach ($restaurents as $k => $r) {
                                     ?>
                                     <tr class="<?php echo ($k + 1) % 2 ? 'odd gradeA' : 'even gradeA'; ?>" class=" sorting_1">
+                                        <td class="center">
+                                            <?php
+                                            if (!empty($r["Restaurent"]["resturent_image"])):
+                                                $image_path = FULL_BASE_URL . '/app/webroot/uploads/restaurents/' . $r['Restaurent']['id'] . '/' . $r['Restaurent']['resturent_image'];
+                                                echo $this->Html->image($image_path, array('alt' => $r['Restaurent']['name'], 'class' => 'img img-responsive', 'width' => 100, 'height' => 100));
+                                            endif;
+                                            ?>
+                                        </td>
                                         <td class="center"><?php echo $this->Text->truncate($r["Restaurent"]["name"], 25, array('exact' => true)); ?></td>
                                         <td class="center"><?php echo $r["Restaurent"]["name"]; ?></td>
                                         <td class="center"><?php echo $r["Restaurent"]["city"]; ?></td>
@@ -44,8 +52,8 @@ $this->end();
                                         </td>
                                         <td class="text-center">
                                             <?php
-                                            echo $this->Html->link('<i class = "fa fa-gear"></i>', array('controller' => 'stores', 'action' => 'admin_store_presentation', $r['Restaurent']['id']), array('escape' => FALSE, 'class' => 'btn btn-primary'));
-                                            echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-trash-o"></i>', array('controller' => 'restaurents', 'action' => 'delete', $r["Restaurent"]["id"]), array('class' => 'btn btn-default', 'escape' => false, 'confirm' => __('Are you sure you want to delete this Restaurent?')));
+                                            echo $this->Html->link('Menu', array('controller' => 'products', 'action' => 'admin_index', $r['Restaurent']['id']), array('escape' => FALSE, 'class' => 'btn btn-primary'));
+                                            echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-trash-o"></i>', array('controller' => 'restaurents', 'action' => 'delete', $r["Restaurent"]["id"]), array('class' => 'btn btn-default', 'escape' => false, 'confirm' => __('Are you sure you want to delete this category?')));
                                             echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-pencil"></i>', array('controller' => 'restaurents', 'action' => 'admin_edit', $r["Restaurent"]["id"]), array('class' => 'btn btn-info', 'escape' => false));
                                             ?>
                                         </td> 

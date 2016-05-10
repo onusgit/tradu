@@ -19,22 +19,26 @@ class RestaurentsController extends AppController {
                 $this->Restaurent->set($this->request->data);
 //                if ($this->Restaurent->validates()):
 
-//                if (!empty($this->request->data['Restaurent']['image']['tmp_name'])):
-//                    $file_name = $this->request->data['Restaurent']['image']['name'];
-//                    $tmp = explode('.', $file_name);
-//                    $ext = end($tmp);
-//                    $whitelist = array("jpg", "jpeg", "gif", "png", "ico");
-//                    if (!(in_array($ext, $whitelist))):
-//                        $this->Session->setFlash(__("Media Not Saved, please edit category"), 'custom_flash_message', array('class' => 'alert-danger', 'icon' => 'icon-thumbs-down'));
-//                        exit;
-//                    endif;
-//                    $icon_source = $this->request->data['Restaurent']['image']['tmp_name'];
-//                    
-//                    move_uploaded_file($icon_source, $icon_destination);
-//                endif;
-//                pr($this->request->data['Restaurent']['image']);
-//                die();
                 $success = $this->Restaurent->save($this->request->data['Restaurent']);
+                if (!empty($this->request->data['Restaurent']['image']['tmp_name'])):
+                    $file_name = $this->request->data['Restaurent']['image']['name'];
+                    $tmp = explode('.', $file_name);
+                    $ext = end($tmp);
+                    $whitelist = array("jpg", "jpeg", "gif", "png", "ico");
+                    if (!(in_array($ext, $whitelist))):
+                        $this->Session->setFlash(__("Media Not Saved, please select an image file"), '', array('class' => 'alert-danger', 'icon' => 'icon-thumbs-down'));
+                        exit;
+                    endif;
+                    $icon_source = $this->request->data['Restaurent']['image']['tmp_name'];
+                    $image_path = WWW_ROOT . 'uploads/restaurents/' . $this->Restaurent->id;
+                    if (!file_exists($image_path)) {
+                        mkdir($image_path, 0777, true);
+                    }
+                    $img_upload = move_uploaded_file($icon_source, $image_path . '/' . $file_name);
+                    if ($img_upload):
+                        $this->Restaurent->saveField('resturent_image', $file_name);
+                    endif;
+                endif;
                 if ($success):
                     $this->Session->setFlash('Store Added Successfully');
                     $this->redirect(array('controller' => 'Restaurents', 'action' => 'admin_index'));
@@ -60,7 +64,31 @@ class RestaurentsController extends AppController {
                     if (!empty($this->request->data)):
                         $this->Restaurent->set($this->request->data['Restaurent']);
 //                        if ($this->Restaurent->RestaurentValidate()):
-                        $success = $this->Restaurent->save($this->request->data['Restaurent']);
+                        $this->Restaurent->id = $restaurent_id;
+                                $success = $this->Restaurent->save($this->request->data['Restaurent']);
+
+                        if (!empty($this->request->data['Restaurent']['image']['tmp_name'])):
+                            $file_name = $this->request->data['Restaurent']['image']['name'];
+                            $tmp = explode('.', $file_name);
+                            $ext = end($tmp);
+                            $whitelist = array("jpg", "jpeg", "gif", "png", "ico");
+                            if (!(in_array($ext, $whitelist))):
+                                $this->Session->setFlash(__("Media Not Saved, please select an image file"), '', array('class' => 'alert-danger', 'icon' => 'icon-thumbs-down'));
+                                exit;
+                            endif;
+                            $icon_source = $this->request->data['Restaurent']['image']['tmp_name'];
+                            $image_path = WWW_ROOT . 'uploads/restaurents/' . $this->Restaurent->id;
+                            if (!file_exists($image_path)) {
+                                mkdir($image_path, 0777, true);
+                            }
+                            $img_upload = move_uploaded_file($icon_source, $image_path . '/' . $file_name);
+                            if ($img_upload):
+                                @unlink($image_path . '/' . $restaurent['Restaurent']['resturent_image']);
+                                $this->Restaurent->saveField('resturent_image', $file_name);
+                            endif;
+                        endif;
+
+
                         if ($success):
                             $this->Session->setFlash('Restaurent Updated Successfully');
                             $this->redirect(array('controller' => 'Restaurents', 'action' => 'admin_index'));
@@ -91,8 +119,12 @@ class RestaurentsController extends AppController {
 
     public function admin_delete($restaurent_id = null) {
         if (!empty($restaurent_id)):
+            $restaurent_data = $this->Restaurent->find('first', array('conditions' => array('id' => $restaurent_id)));
             $success = $this->Restaurent->delete($restaurent_id);
-            if ($restaurent_id):
+            if ($success):
+                $path_to_image = WWW_ROOT . 'uploads/restaurents/' . $restaurent_id;
+                @unlink($path_to_image . '/' . $restaurent_data['Restaurent']['resturent_image']);
+                @rmdir($path_to_image);
                 $this->Session->setFlash('Restaurent deleted successfully.');
             else:
                 $this->Session->setFlash('Restaurent not deleted successfully.');

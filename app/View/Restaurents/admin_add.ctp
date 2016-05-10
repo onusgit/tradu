@@ -39,10 +39,10 @@
 		document.getElementById("longitude").value = marker.latLng.lng();
 	    });
 
-	    for (var component in componentForm) {
-		document.getElementById(component).value = '';
-		document.getElementById(component).disabled = false;
-	    }
+//	    for (var component in componentForm) {
+//		document.getElementById(component).value = '';
+//		document.getElementById(component).disabled = false;
+//	    }
 
 	    for (var i = 0; i < place.address_components.length; i++) {
 		var addressType = place.address_components[i].types[0];
@@ -115,11 +115,11 @@
 				    <?php echo $this->Form->input('country', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'country', 'div' => FALSE, 'placeholder' => '', 'options' => $countries)); ?>
 				</div>
 			    </div>
-<!--			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
+			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
 				<div class="col-lg-9">
 				    <?php echo $this->Form->file('image', array('class' => 'form-control', 'label' => FALSE, 'id' => 'image', 'div' => FALSE, 'placeholder' => '')); ?>
 				</div>
-			    </div>-->
+			    </div>
 			</div>
 			<div class="col-sm-4"> 
 			    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Email'); ?></label>
