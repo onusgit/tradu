@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 
 class RestaurentsController extends AppController {
 
-    public $uses = array('Restaurent', 'Menu', 'Country', 'Restaurent');
+    public $uses = array('Restaurent', 'Category', 'Menu', 'Language', 'MenuLanguage', 'Country');
 
     public function admin_index() {
         $restaurents = $this->Restaurent->find('all');
@@ -65,7 +65,7 @@ class RestaurentsController extends AppController {
                         $this->Restaurent->set($this->request->data['Restaurent']);
 //                        if ($this->Restaurent->RestaurentValidate()):
                         $this->Restaurent->id = $restaurent_id;
-                                $success = $this->Restaurent->save($this->request->data['Restaurent']);
+                        $success = $this->Restaurent->save($this->request->data['Restaurent']);
 
                         if (!empty($this->request->data['Restaurent']['image']['tmp_name'])):
                             $file_name = $this->request->data['Restaurent']['image']['name'];
@@ -143,6 +143,21 @@ class RestaurentsController extends AppController {
             $this->Restaurent->saveField('status', $this->request->data['value']);
         endif;
         exit();
+    }
+
+    public function menu($restaurent_id = null) {
+        $restaurent_categories = $this->Category->find('all', array('conditions' => array('restaurent_id' => $restaurent_id)));
+        $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id'))));
+        $restaurent_menu = $this->Menu->find('all', array('conditions' => array('Menu.restaurent_id' => $restaurent_id), 'ORDER' => 'Category.id'));
+        if (!empty($restaurent_categories)):            
+            foreach ($restaurent_categories as $k => $v):
+            $data[$k]['product_categry'] = $v;
+                $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id'))));
+                $restaurent_menu = $this->Menu->find('all', array('conditions' => array('Menu.restaurent_id' => $restaurent_id, 'Menu.category_id' => $v['Category']['id']), 'ORDER' => 'Category.id'));
+            $data[$k]['products'] = $restaurent_menu;    
+            endforeach;
+        endif;
+        $this->set(compact('restaurent_categories', 'restaurent_menu', 'data'));
     }
 
 }

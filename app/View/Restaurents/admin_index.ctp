@@ -52,7 +52,9 @@ $this->end();
                                         </td>
                                         <td class="text-center">
                                             <?php
-                                            echo $this->Html->link('Menu', array('controller' => 'products', 'action' => 'admin_index', $r['Restaurent']['id']), array('escape' => FALSE, 'class' => 'btn btn-primary'));
+                                            $url = "/restaurents/menu/".$r["Restaurent"]["id"];
+                                            echo $this->Html->link('View Menu Page', '#', array('escape' => FALSE, 'class' => 'btn btn-primary', 'onclick' => "window.open('$url' , '_blank')"));
+                                            echo '&nbsp;&nbsp;' . $this->Html->link('Menu', array('controller' => 'products', 'action' => 'admin_index', $r['Restaurent']['id']), array('escape' => FALSE, 'class' => 'btn btn-primary'));
                                             echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-trash-o"></i>', array('controller' => 'restaurents', 'action' => 'delete', $r["Restaurent"]["id"]), array('class' => 'btn btn-default', 'escape' => false, 'confirm' => __('Are you sure you want to delete this category?')));
                                             echo '&nbsp;&nbsp;' . $this->Html->link('<i class = "fa fa-pencil"></i>', array('controller' => 'restaurents', 'action' => 'admin_edit', $r["Restaurent"]["id"]), array('class' => 'btn btn-info', 'escape' => false));
                                             ?>

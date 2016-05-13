@@ -88,3 +88,9 @@ img.icon {
     display: flex;
     align-items: center;
 }
+/***************************************************
+                Custom Style
+***************************************************/
+#page-content{
+    padding: 60px 0;
+}
