@@ -30,7 +30,7 @@
  */
 	Router::connect('/home/*', array('controller' => 'homes', 'action' => 'index'));
 
-        
+        Router::parseExtensions('json', 'xml');
 Router::connect('/admin', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents', 'action' => 'index'));
 Router::connect('/admin/:controller/:action/*', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents'));
 /**

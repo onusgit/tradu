@@ -40,26 +40,35 @@
                         <div class="row verticle-center">
                             <div class="col-md-3">
                                 <div class="brand">
-                                    <a href="<?php echo FULL_BASE_URL; ?>"><img class="img img-responsive" src="img/logo-restaurants.jpg" alt="logo"></a>
+                                    <!--<a href="<?php echo FULL_BASE_URL; ?>"><img class="img img-responsive" src="/img/logo-restaurants.jpg" alt="logo"></a>-->
+                                    <a href="<?php echo FULL_BASE_URL; ?>"><h1 class="site_name"><?php echo __('Traducmeal') ?></h1></a>
                                 </div>
                             </div>
                             <div class="col-md-6 col-centered"> 
                                 <div class="language_selector">
                                     <ul class="nav">
                                         <li class="hm">
-                                            <img class="icon" src="img/flag_icon/en.png" alt="">
+                                            <?php 
+                                                echo $this->Html->image('flag_icon/en.png', array('class' => 'icon'));
+                                            ?>
                                             <span>English</span>
                                         </li>
                                         <li class="fb">
-                                            <img class="icon" src="img/flag_icon/es.png" alt="">
+                                            <?php 
+                                                echo $this->Html->image('flag_icon/es.png', array('class' => 'icon'));
+                                            ?>
                                             <span>Spanish</span>
                                         </li>
                                         <li class="gp">
-                                            <img class="icon" src="img/flag_icon/fr.png" alt="">
+                                            <?php 
+                                                echo $this->Html->image('flag_icon/fr.png', array('class' => 'icon'));
+                                            ?>
                                             <span>French</span>
                                         </li>
                                         <li class="tw">
-                                            <img class="icon" src="img/flag_icon/ru.png" alt="">
+                                            <?php 
+                                                echo $this->Html->image('flag_icon/ru.png', array('class' => 'icon'));
+                                            ?>
                                             <span>Russian</span>
                                         </li>                                    
                                     </ul>
@@ -99,7 +108,12 @@
                 <!--Off Canvas Navigation-->
                 <nav class="off-canvas-navigation">
                     <header>Navigation</header>
-                    <div class="main-navigation navigation-off-canvas"></div>
+                    <div class="main-navigation navigation-off-canvas">
+                        <ul>
+                            <li><a href="<?php echo FULL_BASE_URL ?>">Home</a></li>
+                            <li><a href="<?php echo Router::url(array('controller'=> 'restaurents', 'action' => 'index')) ?>">Restaurent Listing </a></li>
+                       </ul>
+                    </div>
                 </nav>
                 <!--end Off Canvas Navigation-->
                 <!--Page Content-->
@@ -115,12 +129,10 @@
                     <div class="footer-top">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4 col-sm-4">
-                                   
+                                <div class="col-md-8 col-sm-8">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1312.9473290736378!2d2.349797!3d48.841148!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6975581cb97b979f!2sLa+Cour+du+5%C3%A8me!5e0!3m2!1sen!2sin!4v1463398063442" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>                                
                                 </div>
-                                <div class="col-md-4 col-sm-4">
-                                   
-                                </div>
+                                
                                 <div class="col-md-4 col-sm-4">
                                     <section>
                                         <h2>About Us</h2>
@@ -192,7 +204,8 @@
     echo $this->Html->script('jquery.hotkeys.js');
     echo $this->Html->script('jquery.nouislider.all.min.js');
     echo $this->Html->script('custom.js');
-    echo $this->Html->script('maps.js');
+    echo $this->Html->script('jquery.geocomplete.js');
+    echo $this->Html->script('jquery.mCustomScrollbar.concat.min.js');
     echo $this->fetch('footer_js');
     ?>            
     <script>
@@ -201,7 +214,7 @@
             initializeOwl(rtl);
         });
 
-        autoComplete();
+        //autoComplete();
     </script>
 
     <!--[if lte IE 9]>

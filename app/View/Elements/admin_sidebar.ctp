@@ -60,6 +60,14 @@
         <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
+            <li class="<?php if ($this->request->controller == "languages" && in_array($this->request->action, array('index', 'add', 'edit'))) {
+                    echo "active";
+                } ?>">
+                <?php echo $this->Html->link('<i class="fa fa-globe"></i> ' . __('Languages'), array('controller' => 'languages', 'action' => 'admin_index'), array('escape' => false)); ?>
+            </li>
+        <?php endif; ?>
+            
+        <?php if($login_user_group_id == 1): ?>    
             <li class="sidebar-heading"><h4><?php echo __('Settings'); ?></h4></li>   
             <li class="padding-left-25 <?php if ($this->request->controller == "page_settings") {
                     echo "active";

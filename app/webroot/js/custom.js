@@ -17,11 +17,11 @@ $(document).ready(function($) {
 
     adaptBackgroundHeight();
 
-    $('.quick-view, .results .item').live('click',  function(){
-        var id = $(this).attr('id');
-        quickView(id);
-        return false;
-    });
+//    $('.quick-view, .results .item').live('click',  function(){
+//        var id = $(this).attr('id');
+//        quickView(id);
+//        return false;
+//    });
 
     // Scrollbar on "Results" section
 
@@ -218,9 +218,9 @@ $(document).ready(function($) {
         $('.oh-timepicker').timepicker();
     }
 
-    $('.item .quick-view').on('click',function (e) {
-        e.preventDefault();
-    });
+//    $('.item .quick-view').on('click',function (e) {
+//        e.preventDefault();
+//    });
 
 //  Items scripts ------------------------------------------------------------------------------------------------------
 
@@ -456,7 +456,7 @@ function equalHeight(container){
 // Initialize Owl carousel ---------------------------------------------------------------------------------------------
 
 function initializeOwl(_rtl){
-    $.getScript( "assets/js/owl.carousel.min.js", function( data, textStatus, jqxhr ) {
+    $.getScript( "/js/owl.carousel.min.js", function( data, textStatus, jqxhr ) {
         if ($('.owl-carousel').length > 0) {
             if ($('.carousel-full-width').length > 0) {
                 setCarouselWidth();
