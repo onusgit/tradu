@@ -7,6 +7,10 @@ class LanguagesController extends AppController {
 
     public $uses = array('Language', 'MenuLanguage');
 
+    public function beforeFilter() { 
+        parent::beforeFilter();
+        //$this->check_cart_detail();
+    }
     public function admin_index() {
         $languages = $this->Language->find('all');
         $this->set(compact('languages'));

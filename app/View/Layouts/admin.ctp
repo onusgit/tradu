@@ -57,11 +57,12 @@ $user = $this->Session->read('UserAuth.User');
                             class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                             class="icon-bar"></span><span class="icon-bar"></span></button>
                         <?php
+                        $admin_url = '/';
                         if ($user['user_group_id'] == 1):
                             $admin_url = '/admin';
                         endif;
                         ?>
-                    <a id="logo" href="<?php echo $admin_url ?>"><span class="fa fa-rocket"></span><span class="logo-text"><?php echo $this->Html->image('logo-restaurants.jpg', array('alt' => 'Traducmeal', 'div' => false)); ?></span>               
+                    <a id="logo" href="<?php echo $admin_url ?>"><span class="fa fa-rocket"></span><span class="logo-text"><?php echo 'Traducmeal';?></span>               
                     </a>
 
                 </div>
