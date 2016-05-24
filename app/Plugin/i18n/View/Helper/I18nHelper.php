@@ -74,14 +74,14 @@ class I18nHelper extends AppHelper {
             $out.='<ul role="menu" class="nav">';
             foreach ($langs as $lang) {
                 $class = $lang;
-//                if ($lang == Configure::read('Config.language') || $lang == $valu) {
-//                    $class .= ' selected';
-//                } else {
-                    $url = array_merge($this->params['named'], $this->params['pass'], compact('lang'));
-                    $lFname = Configure::read('Config.languages_full_name');
-                    $language = $lFname[$lang];
-                    $out.='<li class="' . $class . '">' . $this->Html->link($this->flagImage($lang, $options).'<span>'.$language.'</span>', $url, array('escape' => false, 'title' => $language, 'class' => 'language-li')) . '</li>';
-//                }
+                if ($lang == Configure::read('Config.language') || $lang == $valu) {
+                    $class .= ' selected';
+                }
+                $url = array_merge($this->params['named'], $this->params['pass'], compact('lang'));
+                $lFname = Configure::read('Config.languages_full_name');
+                $language = $lFname[$lang];
+                $out.='<li class="' . $class . '">' . $this->Html->link($this->flagImage($lang, $options).'<span>'.$language.'</span>', $url, array('escape' => false, 'title' => $language, 'class' => 'language-li')) . '</li>';
+
             }
             $out.='</ul>';
             

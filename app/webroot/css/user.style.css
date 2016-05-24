@@ -25,16 +25,16 @@
 	opacity:1;
 	//height:190px;
 }
-.language_selector li.eng:hover{
+.language_selector li.eng:hover, .language_selector li.eng.selected{
 	border-bottom:4px solid rgba(11, 132, 138, 1);
 }
-.language_selector li.spa:hover{
+.language_selector li.spa:hover, .language_selector li.spa.selected{
 	border-bottom:4px solid rgba(241, 83, 70, 1);
 }
-.language_selector li.fra:hover{
+.language_selector li.fra:hover, .language_selector li.fra.selected{
 	border-bottom:4px solid rgba(32, 16, 49, 1);
 }
-.language_selector li.rus:hover{
+.language_selector li.rus:hover, .language_selector li.rus.selected{
 	border-bottom:4px solid rgba(228, 148, 7, 1);
 }
 .language_selector li.cl:hover{
@@ -90,6 +90,9 @@ img.icon {
 }
 .nav > li > a:hover, .nav > li > a:focus{
     background-color: transparent;
+}
+.nav > li > a{
+    padding: 5px 15px;
 }
 /***************************************************
                 Custom Style
