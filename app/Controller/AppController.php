@@ -47,6 +47,28 @@ class AppController extends Controller {
             // change layout
             $this->layout = 'admin';
         }
+        
+        if (isset($this->request->params['named']['lang'])) {
+            $lang = $this->request->params['named']['lang'];
+            if (in_array($lang, Configure::read('Config.languages'))) {
+                $this->Session->write('Config.language', $lang);
+            } else if ($lang == 'fr-fr') {
+                $this->Session->write('Config.language', 'fra');
+            } else {
+                $this->Session->write('Config.language', DEFAULT_LANGUAGE);
+            }
+            Configure::write('Config.language', $this->Session->read('Config.language'));
+        } else {
+            $default_lang = $this->Session->read('Config.language');
+            if (isset($default_lang) && $default_lang != ''):
+                Configure::write('Config.language', $this->Session->read('Config.language'));
+            else:
+                Configure::write('Config.language', 'fra');
+                $this->Session->write('Config.language', 'fra');
+            endif;
+        }
+        
+        setlocale("LC_ALL", "fre_FR.utf8");
     }
 
     private function userAuth() {

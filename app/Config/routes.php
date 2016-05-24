@@ -31,16 +31,21 @@
 	Router::connect('/home/*', array('controller' => 'homes', 'action' => 'index'));
 
         Router::parseExtensions('json', 'xml');
-Router::connect('/admin', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents', 'action' => 'index'));
-Router::connect('/admin/:controller/:action/*', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents'));
+        Router::connect('/admin', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents', 'action' => 'index'));
+        Router::connect('/admin/:controller/:action/*', array('admin' => true, 'prefix' => 'admin', 'controller' => 'restaurents'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
  */
 	CakePlugin::routes();
+        
 
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use
  * the built-in default routes.
  */
-	require CAKE . 'Config' . DS . 'routes.php';
+//	require CAKE . 'Config' . DS . 'routes.php';
+
+        App::uses('I18nRoute', 'I18n.Routing/Route');
+	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'), array('routeClass' => 'I18nRoute'));
+	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'), array('routeClass' => 'I18nRoute'));

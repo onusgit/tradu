@@ -109,11 +109,10 @@ CakeLog::config('error', array(
     'file' => 'error',
 ));
 
-define('DEFAULT_LANGUAGE', 'fra'); // The 3 letters code for your default language
-Configure::write('Config.languages', array('eng', 'fra'));
-Configure::write('Config.languages_full_name', array('eng' => __('English'), 'fra' => __('French')));
+define('DEFAULT_LANGUAGE', 'spa'); // The 3 letters code for your default language
+Configure::write('Config.languages', array('eng', 'fra', 'spa', 'rus'));
+Configure::write('Config.languages_full_name', array('eng' => __('English'), 'fra' => __('French'), 'spa' => __('Spanish'), 'rus' => __('Russian')));
 CakePlugin::load('I18n', array('routes' => true));
-
 CakePlugin::load('DebugKit');
 
 CakePlugin::loadAll(array(

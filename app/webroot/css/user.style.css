@@ -25,16 +25,16 @@
 	opacity:1;
 	//height:190px;
 }
-.language_selector li.hm:hover{
+.language_selector li.eng:hover{
 	border-bottom:4px solid rgba(11, 132, 138, 1);
 }
-.language_selector li.fb:hover{
+.language_selector li.spa:hover{
 	border-bottom:4px solid rgba(241, 83, 70, 1);
 }
-.language_selector li.gp:hover{
+.language_selector li.fra:hover{
 	border-bottom:4px solid rgba(32, 16, 49, 1);
 }
-.language_selector li.tw:hover{
+.language_selector li.rus:hover{
 	border-bottom:4px solid rgba(228, 148, 7, 1);
 }
 .language_selector li.cl:hover{
@@ -44,7 +44,7 @@ img.icon {
     background: rgba(255, 255, 255, 0.4);
     /* padding: 14px; */
     border-radius: 100%;
-    margin: 20px auto;
+    margin: 16px auto;
     display: block;
     transition: all 0.8s;
     -webkit-transition: all 0.8s;
@@ -69,16 +69,16 @@ img.icon {
 .language_selector li:hover span {
     margin-top: -5px;
 }
-.hm{
+.eng{
 	background:rgba(29, 162, 168, 0.8);
 }
-.fb{
+.spa{
 	background:rgba(255, 89, 76, 0.8);
 }
-.gp{
+.fra{
 	background:rgba(47, 31, 64, 0.8);
 }
-.tw{
+.rus{
 	background:rgba(254, 162, 14, 0.8);
 }
 .cl{
@@ -87,6 +87,9 @@ img.icon {
 .verticle-center{
     display: flex;
     align-items: center;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+    background-color: transparent;
 }
 /***************************************************
                 Custom Style

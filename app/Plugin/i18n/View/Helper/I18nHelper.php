@@ -53,7 +53,7 @@ class I18nHelper extends AppHelper {
             'id' => '',
             'appendName' => false);
         $options = array_merge($_defaults, $options);
-        $langs = $this->availableLanguages();
+        $langs = $this->availableLanguages();       
 
         $out = '';
         if (!empty($langs)) {
@@ -69,24 +69,24 @@ class I18nHelper extends AppHelper {
             if ($valu == "en-us") {
                 $valu = "eng";
             }
-            $out.='<div class="btn-group">';
-            $out.='<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">' . $this->flagImage($valu, $options) . ' &nbsp;<span class="caret"></span></button>';
-            $out.='<ul role="menu" class="' . $options['class'] . ' dropdown-menu pull-right"' . $id . ' role="menu" style="min-width:0px">';
+//            $out.='<div class="btn-group">';
+//            $out.='<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">' . $this->flagImage($valu, $options) . ' &nbsp;<span class="caret"></span></button>';
+            $out.='<ul role="menu" class="nav">';
             foreach ($langs as $lang) {
                 $class = $lang;
-                if ($lang == Configure::read('Config.language') || $lang == $valu) {
-                    $class .= ' selected';
-                } else {
+//                if ($lang == Configure::read('Config.language') || $lang == $valu) {
+//                    $class .= ' selected';
+//                } else {
                     $url = array_merge($this->params['named'], $this->params['pass'], compact('lang'));
                     $lFname = Configure::read('Config.languages_full_name');
                     $language = $lFname[$lang];
-                    $out.='<li class="' . $class . '">' . $this->Html->link($this->flagImage($lang, $options), $url, array('escape' => false, 'title' => $language, 'style' => 'margin:5%', 'class' => 'pull-right')) . '</li>';
-                }
+                    $out.='<li class="' . $class . '">' . $this->Html->link($this->flagImage($lang, $options).'<span>'.$language.'</span>', $url, array('escape' => false, 'title' => $language, 'class' => 'language-li')) . '</li>';
+//                }
             }
             $out.='</ul>';
-            $out.='</div>';
-        }
-
+            
+        }                           
+                                        
         return $out;
     }
 
@@ -100,14 +100,14 @@ class I18nHelper extends AppHelper {
      *  - appendName: boolean, whether the language name must be appended to the flag or not [default: false]
      * @return void
      */
-    public function frontFlagSwitcher($options = array()) {
+    public function frontFlagSwitcher1($options = array()) {
         $_defaults = array(
             'basePath' => $this->basePath,
             'class' => 'languages',
             'id' => '',
             'appendName' => false);
         $options = array_merge($_defaults, $options);
-        $langs = $this->availableLanguages();
+        $langs = $this->availableLanguages();        
         $out = '';
         if (!empty($langs)) {
             $id = empty($options['id']) ? '' : ' id="' . $options['id'] . '"';
@@ -125,6 +125,10 @@ class I18nHelper extends AppHelper {
             }
             if ($valu == 'eng'):
                 $lang_title = __('English');
+            elseif ($valu == 'rus'):
+                $lang_title = __('Russian');
+            elseif ($valu == 'spa'):
+                $lang_title = __('Spanish');
             else:
                 $lang_title = __('French');
             endif;
@@ -196,7 +200,7 @@ class I18nHelper extends AppHelper {
         endif;
         $language = $lFname[$lang];
 
-        $result = $this->Html->image($options['basePath'] . $flag . '.png', array('class' => 'flag_images', 'title' => $language));
+        $result = $this->Html->image($options['basePath'] . $flag . '.png', array('class' => 'icon', 'title' => $language));
 
         if ($options['appendName'] === true) {
             $result .= $this->Html->tag('span', $this->getName($lang));

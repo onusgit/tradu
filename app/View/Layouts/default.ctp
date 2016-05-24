@@ -47,7 +47,8 @@
                             </div>
                             <div class="col-md-6 col-centered"> 
                                 <div class="language_selector">
-                                    <ul class="nav">
+                                    <?php echo $this->I18n->flagSwitcher(array('class' => 'languages', 'id' => 'language-switcher')); ?>
+<!--                                    <ul class="nav">
                                         <li class="hm">
                                             <?php 
                                                 echo $this->Html->image('flag_icon/en.png', array('class' => 'icon'));
@@ -72,15 +73,15 @@
                                             ?>
                                             <span>Russian</span>
                                         </li>                                    
-                                    </ul>
+                                    </ul>-->
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <nav class="navigation-items">
-                                    <div class="wrapper">
+                                    <div class="wrapper">                                       
                                         <ul class="main-navigation navigation-top-header"></ul>
                                         <ul class="user-area">
-                                            <li><a href="/login">Sign In</a></li>
+                                            <li><a href="/login"><?php echo __('Sign In');?></a></li>
                                             <li><a href="/register"><strong>Register</strong></a></li>
                                         </ul>
                                         <a href="#" class="submit-item">

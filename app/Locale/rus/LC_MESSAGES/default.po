@@ -1,0 +1,6 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <info@show-up.fr>
+#
+
+msgid "Sign In"
+msgstr "russian"
