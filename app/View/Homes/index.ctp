@@ -7,23 +7,12 @@
                 <form class="main-search border-less-inputs background-dark narrow" role="form" method="post" action="?">
                     <div class="input-row">
                         <div class="form-group">
-                            <label for="keyword">Keyword</label>
-                            <input type="text" class="form-control" id="keyword" placeholder="Enter Keyword">
+                            <label for="keyword">Restaurent Name</label>
+                            <input type="text" class="form-control" id="keyword" placeholder="<?php echo __('Enter Restaurent Name') ?>">
                         </div>
                         <!-- /.form-group -->
-                        <div class="form-group">
-                            <label for="model">Place Type</label>
-                            <select name="model" id="model" multiple title="Any" data-live-search="true">
-                                <option value="1">Restaurant</option>
-                                <option value="2">Vegetarian</option>
-                                <option value="3">Bar</option>
-                                <option value="4">Night Life</option>
-                                <option value="5">Breakfast</option>
-                                <option value="6">Fast Food</option>
-                                <option value="7">Steak & Grill</option>
-                            </select>
-                        </div>
-                        <!-- /.form-group -->
+                      
+                       
                         <div class="form-group">
                             <label for="location">Location</label>
                             <div class="input-group location">
@@ -176,7 +165,7 @@
                                         <aside class="reviews"><?php echo rand(1, 10) ?> reviews</aside>
                                     </div>
                                     <div class="type">
-                                        <i><img src="/img/icons/restaurants-bars/restaurants/restaurant.png"></i>
+                                        <i><img src="/img/icons/restaurant/restaurant.png"></i>
                                         <span>Restaurant</span>
                                     </div>
                                 </div>
@@ -272,6 +261,7 @@
 <?php echo $this->start('footer_js') ?>
 <script>
     $(document).ready(function () {
+		autoComplete();
         $('.quick-view').live('click', function () {
             var id = $(this).attr('data-id');
             quickView(id);
@@ -284,7 +274,6 @@
                 url: '<?php echo Router::url(array('controller' => 'restaurents', 'action' => 'quick_view' )) ?>',
                 data: {id: id},
                 success: function (data) {
-                    console.log(data);
                     // Create HTML element with loaded data
                     $('body').append(data);
                 }

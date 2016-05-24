@@ -1,9 +1,3 @@
-<?php
-    $this->start('header_css');
-        echo $this->Html->css('jquery.mCustomScrollbar.css');
-    $this->end('header_css');
-?>
-<div id="page-content">
     <!-- Map Canvas-->
     <div class="map-canvas list-width-30">
         <!-- Map -->
@@ -36,22 +30,17 @@
         <!--end Items List-->
     </div>
     <!-- end Map Canvas-->
-</div>
 <?php 
     echo $this->start('footer_js');
-    echo $this->Html->script('views/restaurent_maps.js');
-    
+    echo $this->Html->script('views/restaurent_maps.js');    
     echo $this->Html->script('infobox.js');
     echo $this->Html->script('markerclusterer.js');
     echo $this->Html->script('richmarker-compiled.js');
-    echo $this->Html->script('smoothscroll.js');
-    echo $this->Html->script('jquery.mCustomScrollbar.concat.min.js');
-    echo $this->Html->script('jquery.geocomplete.js');    
 
 ?>
-<script>
-    var _latitude = 51.541216;
-    var _longitude = -0.095678;
+<script>        
+    var _latitude = 46.2276;
+    var _longitude = 2.2137;
     var jsonPath = "<?php echo Router::url(array('controller' => 'restaurents', 'action' => 'index')) . '.json'; ?>";
 
     // Load JSON data and create Google Maps
@@ -65,6 +54,22 @@
         })
     ;
    
+    $('.quick-view').live('click', function () {
+            var id = $(this).attr('id');
+            quickView(id);
+            return false;
+        });
+        
+        function quickView(id){
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo Router::url(array('controller' => 'restaurents', 'action' => 'quick_view' )) ?>',
+                data: {id: id},
+                success: function (data) {
+                    $('body').append(data);
+                }
+            });
+        }
     //autoComplete();
 
 </script>

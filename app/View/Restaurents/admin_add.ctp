@@ -40,6 +40,12 @@
                                     <?php echo $this->Form->input('country', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'country', 'div' => FALSE, 'placeholder' => '', 'options' => $countries)); ?>
                                 </div>
                             </div>
+                            
+                            <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Languages'); ?><span class="require">*</span></label>
+                                <div class="col-lg-9">
+                                    <?php echo $this->Form->input('restaurent_languages', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox')); ?>
+                                </div>
+                            </div>
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
                                 <div class="col-lg-9">
                                     <?php echo $this->Form->file('image', array('class' => 'form-control', 'label' => FALSE, 'id' => 'image', 'div' => FALSE, 'placeholder' => '')); ?>

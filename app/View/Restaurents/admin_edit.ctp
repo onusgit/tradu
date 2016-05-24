@@ -41,6 +41,13 @@
                                     <?php echo $this->Form->input('country', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'country', 'div' => FALSE, 'placeholder' => '', 'options' => $countries)); ?>
                                 </div>
                             </div>
+                            
+                            <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Languages'); ?><span class="require">*</span></label>
+                                <div class="col-lg-9">
+                                    <?php echo $this->Form->input('language', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox', 'selected' => $restaurent_languages)); ?>
+                                </div>
+                            </div>
+                            
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
                                 <?php if (!empty($restaurent['Restaurent']['resturent_image'])): ?>
                                     <div class="col-lg-3">

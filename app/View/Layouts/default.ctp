@@ -24,6 +24,7 @@
         echo $this->Html->css('bootstrap-select.min.css');
         echo $this->Html->css('owl.carousel.css');
         echo $this->Html->css('jquery.nouislider.min.css');
+        echo $this->Html->css('jquery.mCustomScrollbar.css');
         echo $this->Html->css('colors/green.css');
         echo $this->Html->css('user.style.css');        
         echo $this->fetch('header_css');
@@ -195,8 +196,6 @@
     ?>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
     <?php
-    echo $this->Html->script('jquery-2.1.0.min.js');
-    echo $this->Html->script('before.load.js');
     echo $this->Html->script('bootstrap.min.js');
     echo $this->Html->script('jquery-migrate-1.2.1.min.js');
     echo $this->Html->script('smoothscroll.js');

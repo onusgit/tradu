@@ -92,14 +92,20 @@ img.icon {
                 Custom Style
 ***************************************************/
 #page-content{
-    //padding: 60px 0;
-    background-color: #333;
+   padding: 0;
+    background-color: #222;
     color: #ddd;
 }
-.header,
+.header{
+    background-color: #333;
+    color: #fff;
+}
 #page-footer {
     background-color: #333;
     color: #fff;
+}
+#page-footer .inner{
+    border-top: 1px dotted #0dcdbd;
 }
 .footer-bottom{
     background-color: #fff;
@@ -141,4 +147,34 @@ img.icon {
 }
 .language_selector li {
     background-color: transparent;
+}
+.language_flag {
+    max-width: 50px;
+}
+#detail-sidebar section{
+    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #555;
+}
+#detail-sidebar header {
+    border: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    position: relative;
+}
+#detail-sidebar header h3{
+    margin: 0;
+}
+#detail-sidebar .rating{
+    margin: 0;
+}
+.padding-0{
+    padding: 0;
 }

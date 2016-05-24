@@ -6,14 +6,14 @@ var mapStyles = [ {"featureType":"road","elementType":"labels","stylers":[{"visi
 // Set map height to 100% ----------------------------------------------------------------------------------------------
 
 var $body = $('body');
-if( $body.hasClass('map-fullscreen') ) {
+//if( $body.hasClass('map-fullscreen') ) {
     if( $(window).width() > 768 ) {
         $('.map-canvas').height( $(window).height() - $('.header').height() );
     }
     else {
         $('.map-canvas #map').height( $(window).height() - $('.header').height() );
     }
-}
+//}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Homepage map - Google
@@ -26,7 +26,7 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
     function gMap(){
         var mapCenter = new google.maps.LatLng(_latitude,_longitude);
         var mapOptions = {
-            zoom: 14,
+            zoom: 10,
             center: mapCenter,
             disableDefaultUI: false,
             scrollwheel: false,
@@ -67,7 +67,7 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
             }
             else {
                 markerContent.innerHTML =
-                    '<div class="map-marker ' + json.data[i].color + '">' +
+                    '<div id=' + json.data[i].id + ' class="map-marker ' + json.data[i].color + '">' +
                         '<div class="icon">' +
                         '<img src="' + json.data[i].type_icon +  '">' +
                         '</div>' +
@@ -233,18 +233,17 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
 
             rating('.results .item');
 
-            var $singleItem = $('.list .item');
-            console.log($singleItem);
-            console.log('test');
-//            $singleItem.hover(
-//                function(){
-//                    console.log($(this));
-//                    newMarkers[ $(this).attr('id') - 1 ].content.className = 'marker-active marker-loaded';
-//                },
-//                function() {
-//                    newMarkers[ $(this).attr('id') - 1 ].content.className = 'marker-loaded';
-//                }
-//            );
+            var $singleItem = $('.list .item');      
+            $singleItem.hover(
+                function(){
+                    $('.map-marker[id='+ $(this).attr('id') +']').parent().addClass('marker-active');
+                    //newMarkers[ $(this).attr('id') - 1 ].content.className = 'marker-active marker-loaded';
+                },
+                function() {
+                    $('.map-marker[id='+ $(this).attr('id') +']').parent().removeClass('marker-active');
+                   // newMarkers[ $(this).attr('id') - 1 ].content.className = 'marker-loaded';
+                }
+            );
         });
 
         redrawMap('google', map);
@@ -594,7 +593,6 @@ function simpleMap(_latitude, _longitude, draggableMarker){
 // Push items to array and create <li> element in Results sidebar ------------------------------------------------------
 
 function pushItemsToArray(json, a, category, visibleItemsArray){
-    console.log(json);    
     var itemPrice;
     visibleItemsArray.push(
         '<li>' +

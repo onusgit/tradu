@@ -60,10 +60,10 @@
         <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
-            <li class="<?php if ($this->request->controller == "languages" && in_array($this->request->action, array('index', 'add', 'edit'))) {
+            <li class="<?php if ($this->request->controller == "langs" && in_array($this->request->action, array('index', 'add', 'edit'))) {
                     echo "active";
                 } ?>">
-                <?php echo $this->Html->link('<i class="fa fa-globe"></i> ' . __('Languages'), array('controller' => 'languages', 'action' => 'admin_index'), array('escape' => false)); ?>
+                <?php echo $this->Html->link('<i class="fa fa-globe"></i> ' . __('Languages'), array('controller' => 'langs', 'action' => 'admin_index'), array('escape' => false)); ?>
             </li>
         <?php endif; ?>
             

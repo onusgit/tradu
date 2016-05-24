@@ -11,7 +11,15 @@
                     <div class="col-lg-9">
                         <?php echo $this->Form->input('name', array('label' => FALSE, 'class' => 'search01_small form-control')); ?>
                     </div>
-                </div>          
+                </div>
+                
+                <?php foreach ($category_languages as $k => $lang): ?>          
+                    <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Product') . '  ' . $lang['Language']['name'] . '  ' . __('Name'); ?><span class="require">*</span></label>
+                        <div class="col-lg-9">
+                            <?php echo $this->Form->input('name', array('type' => 'text', 'label' => FALSE, 'class' => 'form-control required eCheckExist', 'id' => 'productname', 'name' => "category_name[{$lang['Language']['id']}]", 'value' => !empty($lang['CategoryLanguage']['name']) ? $lang['CategoryLanguage']['name'] : '')); ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
 
             </div>
 

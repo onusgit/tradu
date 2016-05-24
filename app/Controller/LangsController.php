@@ -1,16 +1,16 @@
-
 <?php
 
 App::uses('AppController', 'Controller');
 
-class LanguagesController extends AppController {
+class LangsController extends AppController {
 
     public $uses = array('Language', 'MenuLanguage');
 
-    public function beforeFilter() { 
+    public function beforeFilter() {
         parent::beforeFilter();
         //$this->check_cart_detail();
     }
+
     public function admin_index() {
         $languages = $this->Language->find('all');
         $this->set(compact('languages'));
@@ -41,11 +41,11 @@ class LanguagesController extends AppController {
                         $this->Language->saveField('language_image', $file_name);
                     endif;
                     $this->Session->setFlash('Language Added Successfully');
-                    $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+                    $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
                 endif;
             else:
                 $this->Session->setFlash('Language Not Added Successfully');
-                $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+                $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
             endif;
         endif;
     }
@@ -84,11 +84,11 @@ class LanguagesController extends AppController {
 
                         if ($success):
                             $this->Session->setFlash('Language Updated Successfully');
-                            $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+                            $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
                         else:
                             $this->Session->setFlash('Language Not Updates Successfully');
-                            $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
-                        endif;                    
+                            $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
+                        endif;
                     endif;
                 else:
                     $this->set(compact('language'));
@@ -97,15 +97,15 @@ class LanguagesController extends AppController {
 
             else:
                 $this->Session->setFlash('No Language Found');
-                $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+                $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
             endif;
 
         else:
             $this->Session->setFlash('Something Going wrong');
-            $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+            $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
         endif;
     }
-    
+
     public function admin_delete($language_id = null) {
         if (!empty($language_id)):
             $language_data = $this->Language->find('first', array('conditions' => array('id' => $language_id)));
@@ -122,8 +122,9 @@ class LanguagesController extends AppController {
         else:
             $this->Session->setFlash('Something Going wrong');
         endif;
-        $this->redirect(array('controller' => 'languages', 'action' => 'admin_index'));
+        $this->redirect(array('controller' => 'langs', 'action' => 'admin_index'));
     }
 
-
 }
+
+?>

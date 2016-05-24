@@ -29,10 +29,10 @@ $this->end();
                     </div>
                 </div>
 
-                <?php foreach ($menu_item_languages as $k => $lang): ?>
+                <?php foreach ($menu_languages as $k => $lang): ?>
                     <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Product') . '  ' . $lang['Language']['name'] . '  ' . __('Name'); ?><span class="require">*</span></label>
                         <div class="col-lg-9">
-                            <?php echo $this->Form->input('name', array('type' => 'text', 'label' => FALSE, 'class' => 'form-control required eCheckExist', 'id' => 'productname', 'name' => "product_name[{$lang['MenuLanguage']['id']}]", 'value' => $lang['MenuLanguage']['name'])); ?>
+                            <?php echo $this->Form->input('name', array('type' => 'text', 'label' => FALSE, 'class' => 'form-control required eCheckExist', 'id' => 'productname', 'name' => "product_name[{$lang['Language']['id']}]", 'value' => !empty($lang['MenuLanguage']['name']) ? $lang['MenuLanguage']['name'] : '')); ?>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -1153,3 +1153,6 @@ img.flo_left {
     font-weight: bold;
     cursor: pointer;
 }
+.language_flag {
+    max-width: 50px !important;
+}
