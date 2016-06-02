@@ -1,543 +1,1571 @@
-# LANGUAGE translation of CakePHP Application
-# Copyright YEAR NAME <info@show-up.fr>
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2013-06-20 19:56+0300\n"
-"PO-Revision-Date: 2013-06-24 17:29+0200\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Project-Id-Version: traducmeal\n"
+"POT-Creation-Date: 2016-05-24 17:40+0530\n"
+"PO-Revision-Date: 2016-05-24 18:07+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.7\n"
+"X-Poedit-Basepath: ../../../../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: Plugin/Usermgmt/Controller/UserGroupsController.php:45
+#: app/webroot/css/admin/vendors/moment/min/moment-with-langs.min.js:779
+#: app/webroot/css/admin/vendors/moment/min/moment.min.js:779
+#: app/webroot/js/admin/vendors/moment/min/moment-with-langs.min.js:779
+#: app/webroot/js/admin/vendors/moment/min/moment.min.js:779 to
+#: upload/app/webroot/css/admin/vendors/moment/min/moment-with-langs.min.js:779
+#: upload/app/webroot/css/admin/vendors/moment/min/moment.min.js:779
+#: upload/app/webroot/js/admin/vendors/moment/min/moment-with-langs.min.js:779
+#: upload/app/webroot/js/admin/vendors/moment/min/moment.min.js:779
+msgid "Weeks"
+msgstr ""
+
+#: app/webroot/js/jquery-ui.min.js:8 assets/assets/js/jquery-ui.min.js:8 to
+#: upload/app/webroot/js/jquery-ui.min.js:8
+#: upload/assets/assets/js/jquery-ui.min.js:8
+msgid "'"
+msgstr ""
+
+#: app/Config/bootstrap.php:114 app/Plugin/i18n/View/Helper/I18nHelper.php:127
+#: to upload/app/Config/bootstrap.php:114
+#: upload/app/Plugin/i18n/View/Helper/I18nHelper.php:127
+msgid "English"
+msgstr ""
+
+#: app/Config/bootstrap.php:114 app/Plugin/i18n/View/Helper/I18nHelper.php:133
+#: to upload/app/Config/bootstrap.php:114
+#: upload/app/Plugin/i18n/View/Helper/I18nHelper.php:129
+msgid "French"
+msgstr ""
+
+#: app/Config/bootstrap.php:114 app/Plugin/i18n/View/Helper/I18nHelper.php:131
+msgid "Spanish"
+msgstr ""
+
+#: app/Config/bootstrap.php:114 app/Plugin/i18n/View/Helper/I18nHelper.php:129
+msgid "Russian"
+msgstr ""
+
+#: app/Controller/AppController.php:44 to
+#: upload/app/Controller/AppController.php:44
+msgid "You must be logged in for that action."
+msgstr ""
+
+#: app/Controller/LangsController.php:31 app/Controller/LangsController.php:69
+#: app/Controller/RestaurentsController.php:36
+#: app/Controller/RestaurentsController.php:119
+msgid "Media Not Saved, please select an image file"
+msgstr ""
+
+#: app/Controller/ProductsController.php:161
+#: app/Controller/ProductsController.php:219
+#: app/Controller/ProductsController.php:237
+msgid "Something went wrong!!"
+msgstr ""
+
+#: app/Model/Restaurents.php:19
+msgid "Restaurent name must not be empty."
+msgstr ""
+
+#: app/Model/Restaurents.php:25
+msgid "Restaurent address must not be empty."
+msgstr ""
+
+#: app/Plugin/Usermgmt/Controller/UserGroupsController.php:45 to
+#: upload/app/Plugin/Usermgmt/Controller/UserGroupsController.php:45
 msgid "The group is successfully added"
-msgstr "Le groupe est ajouté avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UserGroupsController.php:63
+#: app/Plugin/Usermgmt/Controller/UserGroupsController.php:63 to
+#: upload/app/Plugin/Usermgmt/Controller/UserGroupsController.php:63
 msgid "The group is successfully updated"
-msgstr "Le groupe est mis à jour avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UserGroupsController.php:85
+#: app/Plugin/Usermgmt/Controller/UserGroupsController.php:85 to
+#: upload/app/Plugin/Usermgmt/Controller/UserGroupsController.php:85
 msgid "Sorry some users are associated with this group, You cannot delete"
-msgstr "Désolé certains utilisateurs sont associés à ce groupe, vous ne pouvez pas supprimer"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UserGroupsController.php:89
+#: app/Plugin/Usermgmt/Controller/UserGroupsController.php:89 to
+#: upload/app/Plugin/Usermgmt/Controller/UserGroupsController.php:89
 msgid "Group is successfully deleted"
-msgstr "Groupe est supprimé avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:94;138
+#: app/Plugin/Usermgmt/Controller/UsersController.php:94
+#: app/Plugin/Usermgmt/Controller/UsersController.php:130 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:94
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:130
 msgid "Incorrect Email/Username or Password"
-msgstr "Email incorrect / Nom d'utilisateur ou mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:100
+#: app/Plugin/Usermgmt/Controller/UsersController.php:100 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:100
 msgid "Sorry your account is not active, please contact to Administrator"
-msgstr "Désolé, votre compte n'est pas actif, s'il vous plaît contactez l'administrateur"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:105
-msgid "Your registration has not been confirmed please verify your email or contact to Administrator"
-msgstr "Votre inscription n'a pas été confirmée s'il vous plaît vérifier votre e-mail ou contact pour l'administrateur"
+#: app/Plugin/Usermgmt/Controller/UsersController.php:105 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:105
+msgid ""
+"Your registration has not been confirmed please verify your email or contact "
+"to Administrator"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:152
+#: app/Plugin/Usermgmt/Controller/UsersController.php:144 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:144
 msgid "You are successfully signed out"
-msgstr "Vous êtes connecté avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:178
+#: app/Plugin/Usermgmt/Controller/UsersController.php:170 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:170
 msgid "Please select correct register as"
-msgstr "S'il vous plaît sélectionnez registre correctes,"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:206
+#: app/Plugin/Usermgmt/Controller/UsersController.php:198 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:198
 msgid "Please check your mail and confirm your registration"
-msgstr "S'il vous plaît consulter votre messagerie et validez votre inscription"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:212
+#: app/Plugin/Usermgmt/Controller/UsersController.php:204 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:204
 msgid "Sorry new registration is currently disabled, please try again later"
-msgstr "Désolé les nouveaux enregistrements sont désactivés, Merci de réessayer ultérieurement"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:234
+#: app/Plugin/Usermgmt/Controller/UsersController.php:226 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:226
 msgid "Password changed successfully"
-msgstr "Mot de passe modifié avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:260
-msgid "Password for changed successfully"
-msgstr "Mot de passe changé avec succ&#xe8;s"
+#: app/Plugin/Usermgmt/Controller/UsersController.php:252 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:252
+#, php-format
+msgid "Password for %s changed successfully"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:286
+#: app/Plugin/Usermgmt/Controller/UsersController.php:278 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:278
 msgid "The user is successfully added"
-msgstr "L'utilisateur est ajouté avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:306
+#: app/Plugin/Usermgmt/Controller/UsersController.php:298 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:298
 msgid "The user is successfully updated"
-msgstr "L'utilisateur est mis à jour avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:333
+#: app/Plugin/Usermgmt/Controller/UsersController.php:325 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:325
 msgid "User is successfully deleted"
-msgstr "L'utilisateur est supprimé avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:367
+#: app/Plugin/Usermgmt/Controller/UsersController.php:359 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:359
 msgid "User is successfully activated"
-msgstr "L'utilisateur est activé avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:369
+#: app/Plugin/Usermgmt/Controller/UsersController.php:361 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:361
 msgid "User is successfully deactivated"
-msgstr "L'utilisateur est désactivé avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:387
+#: app/Plugin/Usermgmt/Controller/UsersController.php:379 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:379
 msgid "User email is successfully verified"
-msgstr "E-mail de l'utilisateur est vérifiée avec succ&#xe8;s"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:421
+#: app/Plugin/Usermgmt/Controller/UsersController.php:413 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:413
 msgid "Thank you, your account is activated now"
-msgstr "Merci, votre compte est activé maintenant"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:424
+#: app/Plugin/Usermgmt/Controller/UsersController.php:416 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:416
 msgid "Thank you, your account is already activated"
-msgstr "Merci, votre compte est déjà activé"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:427;430
+#: app/Plugin/Usermgmt/Controller/UsersController.php:419
+#: app/Plugin/Usermgmt/Controller/UsersController.php:422 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:419
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:422
 msgid "Sorry something went wrong, please click on the link again"
-msgstr "Désolé une erreur s'est produite, merci de cliquer sur le lien à nouveau"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:449;523
+#: app/Plugin/Usermgmt/Controller/UsersController.php:441
+#: app/Plugin/Usermgmt/Controller/UsersController.php:515 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:441
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:515
 msgid "Incorrect Email/Username"
-msgstr "Email incorrect / Nom d'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:455
-msgid "Your registration has not been confirmed yet please verify your email before reset password"
-msgstr "Votre inscription n'a pas encore été confirmé merci de vérifier votre email avant de réinitialisation du mot de passe"
+#: app/Plugin/Usermgmt/Controller/UsersController.php:447 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:447
+msgid ""
+"Your registration has not been confirmed yet please verify your email before "
+"reset password"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:459
+#: app/Plugin/Usermgmt/Controller/UsersController.php:451 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:451
 msgid "Please check your mail for reset your password"
-msgstr "Merci de vérifier votre courrier pour réinitialiser votre mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:489
+#: app/Plugin/Usermgmt/Controller/UsersController.php:481 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:481
 msgid "Your password has been reset successfully"
-msgstr "Votre mot de passe a été réinitialisé"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:492
+#: app/Plugin/Usermgmt/Controller/UsersController.php:484 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:484
 msgid "Something went wrong, please send password reset link again"
-msgstr "Quelque chose s'est mal passé, s'il vous plaît envoyer le mot de passe lien de réinitialisation à nouveau"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:495;499
+#: app/Plugin/Usermgmt/Controller/UsersController.php:487
+#: app/Plugin/Usermgmt/Controller/UsersController.php:491 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:487
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:491
 msgid "Something went wrong, please click again on the link in email"
-msgstr "Quelque chose s'est mal passé, s'il vous plaît cliquez à nouveau sur le lien dans l'email"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:529
+#: app/Plugin/Usermgmt/Controller/UsersController.php:521 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:521
 msgid "Please check your mail to verify your email"
-msgstr "S'il vous plaît consulter votre messagerie pour vérifier votre e-mail"
+msgstr ""
 
-#: Plugin/Usermgmt/Controller/UsersController.php:531
+#: app/Plugin/Usermgmt/Controller/UsersController.php:523 to
+#: upload/app/Plugin/Usermgmt/Controller/UsersController.php:523
 msgid "Your email is already verified"
-msgstr "Votre e-mail est déjà vérifiée"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:22
-#: Plugin/Usermgmt/View/Users/access_denied.ctp:34
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:28
+#: app/Plugin/i18n/Controller/TranslationsController.php:103 to
+#: upload/app/Plugin/i18n/Controller/TranslationsController.php:103
+msgid "The translation has been saved"
+msgstr ""
+
+#: app/Plugin/i18n/Controller/TranslationsController.php:125
+#: app/Plugin/i18n/Controller/TranslationsController.php:149 to
+#: upload/app/Plugin/i18n/Controller/TranslationsController.php:125
+#: upload/app/Plugin/i18n/Controller/TranslationsController.php:149
+msgid "Translation saved"
+msgstr ""
+
+#: app/Plugin/i18n/Controller/TranslationsController.php:169 to
+#: upload/app/Plugin/i18n/Controller/TranslationsController.php:169
+msgid "Translation deleted"
+msgstr ""
+
+#: app/Plugin/i18n/Model/Translation.php:82 to
+#: upload/app/Plugin/i18n/Model/Translation.php:82
+msgid "Could not save the translation, please check your inputs."
+msgstr ""
+
+#: app/Plugin/i18n/Model/Translation.php:104
+#: app/Plugin/i18n/Model/Translation.php:140
+#: app/Plugin/i18n/Model/Translation.php:186
+#: app/Plugin/i18n/Model/Translation.php:208 to
+#: upload/app/Plugin/i18n/Model/Translation.php:104
+#: upload/app/Plugin/i18n/Model/Translation.php:140
+#: upload/app/Plugin/i18n/Model/Translation.php:186
+#: upload/app/Plugin/i18n/Model/Translation.php:208
+msgid "Invalid Translation"
+msgstr ""
+
+#: app/Plugin/i18n/Model/Translation.php:226 to
+#: upload/app/Plugin/i18n/Model/Translation.php:226
+msgid "You need to confirm to delete this Translation"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:368
+#: lib/Cake/Test/Case/I18n/I18nTest.php:2105 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:368
+#: upload/lib/Cake/Test/Case/I18n/I18nTest.php:2105
+msgid "Plural Rule 1"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:372
+#: lib/Cake/Test/Case/I18n/I18nTest.php:2129 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:372
+#: upload/lib/Cake/Test/Case/I18n/I18nTest.php:2129
+msgid "Plural Rule 1 (from core)"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:376 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:376
+#, php-format
+msgid "Some string with %s"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:380 lib/Cake/Test/Case/BasicsTest.php:392
+#: to upload/lib/Cake/Test/Case/BasicsTest.php:380
+#: upload/lib/Cake/Test/Case/BasicsTest.php:392
+#, php-format
+msgid "Some string with %s %s"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:384 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:384
+#, php-format
+msgid "Some string with %s and a null argument"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:388 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:388
+#, php-format
+msgid "Some string with multiple %s%s, first being null"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:396 lib/Cake/Test/Case/BasicsTest.php:400
+#: to upload/lib/Cake/Test/Case/BasicsTest.php:396
+#: upload/lib/Cake/Test/Case/BasicsTest.php:400
+#, php-format
+msgid "Testing %2$s %1$s"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:404 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:404
+#, php-format
+msgid "Testing %.2f number"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:415 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:415
+msgid "%s are 100% real fruit"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:419 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:419
+msgid "%s are %d% real fruit"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:423 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:423
+msgid "%s are %s% real fruit"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:427 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:427
+msgid "%nonsense %s"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:431 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:431
+msgid "%s are awesome%"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:435 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:435
+#, php-format
+msgid "%2$d %1$s entered the bowl"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:439 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:439
+#, php-format
+msgid "%.2f% of all %s agree"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:451 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:451
+msgid "Check, %+10s, three"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:455 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:455
+msgid "Check, %+5d, two, three"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:459 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:459
+msgid "Check, %'@+10s, three"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:463 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:463
+#, php-format
+msgid "Check, %-10s, three"
+msgstr ""
+
+#: lib/Cake/Test/Case/BasicsTest.php:467 to
+#: upload/lib/Cake/Test/Case/BasicsTest.php:467
+#, php-format
+msgid "Check, %'#-10s, three"
+msgstr ""
+
+#: lib/Cake/Test/Case/I18n/I18nTest.php:1865 to
+#: upload/lib/Cake/Test/Case/I18n/I18nTest.php:1865
+msgid "No Translation needed"
+msgstr ""
+
+#: lib/Cake/Test/Case/I18n/I18nTest.php:1877 to
+#: upload/lib/Cake/Test/Case/I18n/I18nTest.php:1877
+msgid "this is a \"quoted string\""
+msgstr ""
+
+#: lib/Cake/Test/Case/I18n/I18nTest.php:2039 to
+#: upload/lib/Cake/Test/Case/I18n/I18nTest.php:2039
+msgid "balance"
+msgstr ""
+
+#: lib/Cake/Test/Case/View/Helper/FormHelperTest.php:4346 to
+#: upload/lib/Cake/Test/Case/View/Helper/FormHelperTest.php:4346
+msgid "empty"
+msgstr ""
+
+#: lib/Cake/View/ViewBlock.php:78 to upload/lib/Cake/View/ViewBlock.php:78
+#, php-format
+msgid "A view block with the name '%s' is already/still open."
+msgstr ""
+
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:22
+#: app/Plugin/Usermgmt/View/Users/access_denied.ctp:34
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:22
+#: upload/app/Plugin/Usermgmt/View/Users/access_denied.ctp:34
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:28
 msgid "Dashboard"
-msgstr "Tableau de bord"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:24
-#: Plugin/Usermgmt/View/Users/add_user.ctp:28;75
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:38
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:24
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:28
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:75
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:38
+#: lib/Cake/Test/test_app/View/Posts/cache_form.ctp:5 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:24
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:75
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:38
+#: upload/lib/Cake/Test/test_app/View/Posts/cache_form.ctp:5
 msgid "Add User"
-msgstr "Ajouter un utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:25
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:39
-#: Plugin/Usermgmt/View/Users/index.ctp:28
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:25
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:39
+#: app/Plugin/Usermgmt/View/Users/index.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:25
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:39
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:28
 msgid "All Users"
-msgstr "Tous les utilisateurs"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:26
-#: Plugin/Usermgmt/View/UserGroups/add_group.ctp:28;57
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:40
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:26
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:28
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:57
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:40 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:26
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:28
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:57
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:40
 msgid "Add Group"
-msgstr "Ajouter un groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:27
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:28
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:41
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:27
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:28
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:41 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:27
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:41
 msgid "All Groups"
-msgstr "Tous les groupes"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:28
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:42
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:28
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:42
 msgid "Permissions"
-msgstr "Permissions"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:29;35
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:43;47
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:29
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:32
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:43
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:47 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:32
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:43
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:47
 msgid "Profile"
-msgstr "Profil"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:30
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:44
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:30
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:44 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:30
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:44
 msgid "Edit Profile"
-msgstr "Modifier le profil"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:31
-msgid "Apllications"
-msgstr "Applications"
-
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:32
-msgid "Customers"
-msgstr "Clients"
-
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:33
-msgid "Resellers"
-msgstr "Revendeurs"
-
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:37
-#: Plugin/Usermgmt/View/Users/change_password.ctp:28
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:46
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:34
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:28
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:46 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:34
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:46
 msgid "Change Password"
-msgstr "Mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Elements/dashboard.ctp:38
+#: app/Plugin/Usermgmt/View/Elements/dashboard.ctp:35 to
+#: upload/app/Plugin/Usermgmt/View/Elements/dashboard.ctp:35
 msgid "Sign Out"
-msgstr "Déconnexion"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:29
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:29 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:29
 msgid "User Group Permissions"
-msgstr "Groupe de permission de l'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:31
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:31 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:31
 msgid "Select Controller"
-msgstr "Sélectionner un contrôleur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:43
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:43 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:43
 msgid "Controller"
-msgstr "Contrôleur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:44
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:42
-#: Plugin/Usermgmt/View/Users/index.ctp:45
-#: View/Admin/admin_invoice.ctp:29
-#: View/Admin/admin_invoice_reseller.ctp:27
-#: View/Admin/orders.ctp:34
-#: View/Application/index.ctp:137
-#: View/Customer/index.ctp:56
-#: View/Customer/invoice.ctp:23
-#: View/Offers/index.ctp:44
-#: View/Reseller/index.ctp:44
-#: View/Reseller/order_invoice.ctp:26
-#: View/Subscription/index.ctp:43
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:44
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:42
+#: app/Plugin/Usermgmt/View/Users/index.ctp:45
+#: app/View/Langs/admin_index.ctp:23 app/View/Languages/admin_index.ctp:35
+#: app/View/Products/admin_index.ctp:41 app/View/Products/admin_index.ctp:100
+#: app/View/RestaurentTypes/admin_index.ctp:22
+#: app/View/Restaurents/admin_index.ctp:29 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:44
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:42
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:45
+#: upload/app/View/Restaurents/admin_index.ctp:29
 msgid "Action"
-msgstr "Action"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:45
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:45 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:45
 msgid "Permission"
-msgstr "autorisation"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:46
+#: app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:46 to
+#: upload/app/Plugin/Usermgmt/View/UserGroupPermissions/index.ctp:46
 msgid "Operation"
-msgstr "opération"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/add_group.ctp:29
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:29
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:29
-#: Plugin/Usermgmt/View/Users/access_denied.ctp:28
-#: Plugin/Usermgmt/View/Users/activate_password.ctp:28
-#: Plugin/Usermgmt/View/Users/add_user.ctp:29
-#: Plugin/Usermgmt/View/Users/change_password.ctp:29
-#: Plugin/Usermgmt/View/Users/change_user_password.ctp:29
-#: Plugin/Usermgmt/View/Users/dashboard.ctp:29
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:29
-#: Plugin/Usermgmt/View/Users/email_verification.ctp:28
-#: Plugin/Usermgmt/View/Users/forgot_password.ctp:28
-#: Plugin/Usermgmt/View/Users/index.ctp:29
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:29
-#: Plugin/Usermgmt/View/Users/register.ctp:136
-#: Plugin/Usermgmt/View/Users/view_user.ctp:29
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:29
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:29
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:29
+#: app/Plugin/Usermgmt/View/Users/access_denied.ctp:28
+#: app/Plugin/Usermgmt/View/Users/activate_password.ctp:28
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:29
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:29
+#: app/Plugin/Usermgmt/View/Users/change_user_password.ctp:29
+#: app/Plugin/Usermgmt/View/Users/dashboard.ctp:29
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:29
+#: app/Plugin/Usermgmt/View/Users/email_verification.ctp:28
+#: app/Plugin/Usermgmt/View/Users/forgot_password.ctp:28
+#: app/Plugin/Usermgmt/View/Users/index.ctp:29
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:29
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:29
+#: app/View/Elements/admin_breadcrumb.ctp:8
+#: app/View/Elements/admin_sidebar.ctp:34 app/View/Layouts/default.ctp:115 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:29
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:29
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/access_denied.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/activate_password.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/change_user_password.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/dashboard.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/email_verification.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/forgot_password.ctp:28
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:29
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:29
+#: upload/app/View/Elements/admin_breadcrumb.ctp:8
+#: upload/app/View/Elements/admin_sidebar.ctp:34
 msgid "Home"
-msgstr "Accueil"
+msgstr "Casa"
 
-#: Plugin/Usermgmt/View/UserGroups/add_group.ctp:36
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:37
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:36
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:37 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:36
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:37
 msgid "Group Name"
-msgstr "Nom du groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/add_group.ctp:42
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:43
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:42
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:43 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:42
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:43
 msgid "Alias Group Name"
-msgstr "Alias du groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/add_group.ctp:51
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:49
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:40
+#: app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:51
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:49
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:40 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/add_group.ctp:51
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:49
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:40
 msgid "Allow Registration"
-msgstr "Permettre l'enregistrement"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:28
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:28
 msgid "Edit Group"
-msgstr "Modifier le groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/edit_group.ctp:55
+#: app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:55 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/edit_group.ctp:55
 msgid "Update Group"
-msgstr "Mise à jour du groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:37
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:37 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:37
 msgid "Group Id"
-msgstr "Groupe Id"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:38
-#: Plugin/Usermgmt/View/Users/index.ctp:38
-#: View/Categories/add_category.ctp:82
-#: View/Categories/edit_category.ctp:92
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:38
+#: app/Plugin/Usermgmt/View/Users/index.ctp:38 app/View/Langs/admin_add.ctp:14
+#: app/View/Langs/admin_edit.ctp:15 app/View/Langs/admin_index.ctp:22
+#: app/View/Languages/admin_add.ctp:14 app/View/Languages/admin_edit.ctp:15
+#: app/View/Languages/admin_index.ctp:34
+#: app/View/Products/admin_add_category.ctp:10
+#: app/View/Products/admin_add_category.ctp:17
+#: app/View/Products/admin_add_product.ctp:32
+#: app/View/Products/admin_edit_category.ctp:10
+#: app/View/Products/admin_edit_category.ctp:17
+#: app/View/Products/admin_edit_product.ctp:33
+#: app/View/Products/admin_index.ctp:40
+#: app/View/RestaurentTypes/admin_add.ctp:8
+#: app/View/RestaurentTypes/admin_edit.ctp:8
+#: app/View/RestaurentTypes/admin_index.ctp:21
+#: app/View/Restaurents/admin_add.ctp:18
+#: app/View/Restaurents/admin_edit.ctp:18
+#: app/View/Restaurents/admin_index.ctp:25 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:38
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:38
+#: upload/app/View/Restaurents/admin_add.ctp:93
+#: upload/app/View/Restaurents/admin_edit.ctp:93
+#: upload/app/View/Restaurents/admin_index.ctp:25
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:39
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:39 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:39
 msgid "Alias Name"
-msgstr "Alias Nom"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:41
-#: Plugin/Usermgmt/View/Users/index.ctp:44
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:84
-#: Plugin/Usermgmt/View/Users/view_user.ctp:86
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:41
+#: app/Plugin/Usermgmt/View/Users/index.ctp:44
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:84
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:86 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:41
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:44
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:84
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:86
 msgid "Created"
-msgstr "Créer"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:63
-#: Plugin/Usermgmt/View/Users/index.ctp:87
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:63
+#: app/Plugin/Usermgmt/View/Users/index.ctp:87
+#: app/Plugin/i18n/View/Translations/admin_edit.ctp:18
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:68
+#: app/View/Langs/admin_index.ctp:51 app/View/Languages/admin_index.ctp:55
+#: app/View/Products/admin_index.ctp:61 app/View/Products/admin_index.ctp:122
+#: app/View/RestaurentTypes/admin_index.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:63
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:87
+#: upload/app/Plugin/i18n/View/Translations/admin_edit.ctp:18
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:68
 msgid "Delete"
-msgstr "Supprimer"
+msgstr ""
 
-#: Plugin/Usermgmt/View/UserGroups/index.ctp:63
+#: app/Plugin/Usermgmt/View/UserGroups/index.ctp:63 to
+#: upload/app/Plugin/Usermgmt/View/UserGroups/index.ctp:63
 msgid "Are you sure you want to delete this group? Delete it your own risk"
-msgstr "Etes-vous sûr de vouloir supprimer ce groupe?"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/access_denied.ctp:27
+#: app/Plugin/Usermgmt/View/Users/access_denied.ctp:27 to
+#: upload/app/Plugin/Usermgmt/View/Users/access_denied.ctp:27
 msgid "Access Denied"
-msgstr "Acc&#xe8;s refusé"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/activate_password.ctp:27
+#: app/Plugin/Usermgmt/View/Users/activate_password.ctp:27 to
+#: upload/app/Plugin/Usermgmt/View/Users/activate_password.ctp:27
 msgid "Reset Password"
-msgstr "Réinitialiser le mot de"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/activate_password.ctp:36
-#: Plugin/Usermgmt/View/Users/add_user.ctp:64
-#: Plugin/Usermgmt/View/Users/change_user_password.ctp:37
-#: Plugin/Usermgmt/View/Users/login.ctp:13
-#: Plugin/Usermgmt/View/Users/register.ctp:71;171
+#: app/Plugin/Usermgmt/View/Users/activate_password.ctp:36
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:64
+#: app/Plugin/Usermgmt/View/Users/change_user_password.ctp:37 to
+#: upload/app/Plugin/Usermgmt/View/Users/activate_password.ctp:36
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:64
+#: upload/app/Plugin/Usermgmt/View/Users/change_user_password.ctp:37
 msgid "Password"
-msgstr "Mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/activate_password.ctp:41
-#: Plugin/Usermgmt/View/Users/add_user.ctp:69
-#: Plugin/Usermgmt/View/Users/change_password.ctp:47
-#: Plugin/Usermgmt/View/Users/change_user_password.ctp:42
-#: Plugin/Usermgmt/View/Users/register.ctp:77;176
+#: app/Plugin/Usermgmt/View/Users/activate_password.ctp:41
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:69
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:47
+#: app/Plugin/Usermgmt/View/Users/change_user_password.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/Users/activate_password.ctp:41
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:69
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:47
+#: upload/app/Plugin/Usermgmt/View/Users/change_user_password.ctp:42
 msgid "Confirm Password"
-msgstr "Confirmez mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/activate_password.ctp:56
+#: app/Plugin/Usermgmt/View/Users/activate_password.ctp:56 to
+#: upload/app/Plugin/Usermgmt/View/Users/activate_password.ctp:56
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/add_user.ctp:38
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:39
-#: Plugin/Usermgmt/View/Users/index.ctp:41
-#: Plugin/Usermgmt/View/Users/register.ctp:36;145
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:38
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:39
+#: app/Plugin/Usermgmt/View/Users/index.ctp:41 to
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:38
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:39
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:41
 msgid "Group"
-msgstr "Groupe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/add_user.ctp:44
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:45
-#: Plugin/Usermgmt/View/Users/index.ctp:39
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:46
-#: Plugin/Usermgmt/View/Users/register.ctp:46;151
-#: Plugin/Usermgmt/View/Users/view_user.ctp:46
-#: View/Customer/add.ctp:16
-#: View/Customer/edit.ctp:16
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:44
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:45
+#: app/Plugin/Usermgmt/View/Users/index.ctp:39
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:46
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:46 to
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:44
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:45
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:39
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:46
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:46
 msgid "Username"
-msgstr "Nom d'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/add_user.ctp:49
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:50
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:50
-#: Plugin/Usermgmt/View/Users/register.ctp:52;156
-#: Plugin/Usermgmt/View/Users/view_user.ctp:50
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:49
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:50
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:50
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:50 to
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:49
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:50
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:50
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:50
 msgid "First Name"
-msgstr "Prénom"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/add_user.ctp:54
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:55
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:54
-#: Plugin/Usermgmt/View/Users/register.ctp:59;161
-#: Plugin/Usermgmt/View/Users/view_user.ctp:54
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:54
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:55
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:54
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:54 to
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:54
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:55
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:54
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:54
 msgid "Last Name"
-msgstr "Nom"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/add_user.ctp:59
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:60
-#: Plugin/Usermgmt/View/Users/index.ctp:40
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:58
-#: Plugin/Usermgmt/View/Users/register.ctp:65;166
-#: Plugin/Usermgmt/View/Users/view_user.ctp:58
-#: View/Admin/edit.ctp:65
-#: View/Application/contacts.ctp:65
-#: View/Customer/account.ctp:92
-#: View/Customer/add.ctp:77
-#: View/Customer/edit.ctp:78
-#: View/Reseller/account.ctp:100
-#: View/Reseller/add.ctp:71
-#: View/Reseller/edit.ctp:72
+#: app/Plugin/Usermgmt/View/Users/add_user.ctp:59
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:60
+#: app/Plugin/Usermgmt/View/Users/index.ctp:40
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:58
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:58
+#: app/View/Restaurents/admin_add.ctp:56
+#: app/View/Restaurents/admin_edit.ctp:67 to
+#: upload/app/Plugin/Usermgmt/View/Users/add_user.ctp:59
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:60
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:40
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:58
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:58
+#: upload/app/View/Restaurents/admin_add.ctp:125
+#: upload/app/View/Restaurents/admin_edit.ctp:121
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/change_password.ctp:37
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:37 to
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:37
 msgid "Old Password"
-msgstr "Ancien mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/change_password.ctp:42
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:42
 msgid "New Password"
-msgstr "Nouveau mot de passe"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/change_password.ctp:53
-#: Plugin/Usermgmt/View/Users/change_user_password.ctp:48
+#: app/Plugin/Usermgmt/View/Users/change_password.ctp:53
+#: app/Plugin/Usermgmt/View/Users/change_user_password.ctp:48 to
+#: upload/app/Plugin/Usermgmt/View/Users/change_password.ctp:53
+#: upload/app/Plugin/Usermgmt/View/Users/change_user_password.ctp:48
 msgid "Change"
-msgstr "Changer"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/change_user_password.ctp:28
+#: app/Plugin/Usermgmt/View/Users/change_user_password.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Users/change_user_password.ctp:28
 msgid "Change Password for "
-msgstr "Changer mot de passe pour"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:28
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:28
 msgid "Edit User"
-msgstr "Modifier l'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/edit_user.ctp:66
+#: app/Plugin/Usermgmt/View/Users/edit_user.ctp:66 to
+#: upload/app/Plugin/Usermgmt/View/Users/edit_user.ctp:66
 msgid "Update User"
-msgstr "Mettre à jour l'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/email_verification.ctp:27
+#: app/Plugin/Usermgmt/View/Users/email_verification.ctp:27 to
+#: upload/app/Plugin/Usermgmt/View/Users/email_verification.ctp:27
 msgid "Email Verification"
-msgstr "Vérification de l'email"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/email_verification.ctp:35
-#: Plugin/Usermgmt/View/Users/forgot_password.ctp:36
+#: app/Plugin/Usermgmt/View/Users/email_verification.ctp:35
+#: app/Plugin/Usermgmt/View/Users/forgot_password.ctp:36 to
+#: upload/app/Plugin/Usermgmt/View/Users/email_verification.ctp:35
+#: upload/app/Plugin/Usermgmt/View/Users/forgot_password.ctp:36
 msgid "Enter Email / Username"
-msgstr "Entrer Email / Nom d'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/email_verification.ctp:41
-#: Plugin/Usermgmt/View/Users/forgot_password.ctp:42
+#: app/Plugin/Usermgmt/View/Users/email_verification.ctp:41
+#: app/Plugin/Usermgmt/View/Users/forgot_password.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/Users/email_verification.ctp:41
+#: upload/app/Plugin/Usermgmt/View/Users/forgot_password.ctp:42
 msgid "Send Email"
-msgstr "Envoyer un message"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/forgot_password.ctp:27
+#: app/Plugin/Usermgmt/View/Users/forgot_password.ctp:27 to
+#: upload/app/Plugin/Usermgmt/View/Users/forgot_password.ctp:27
 msgid "Forgot Password"
-msgstr "Mot de passe oublié"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/index.ctp:37
+#: app/Plugin/Usermgmt/View/Users/index.ctp:37 to
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:37
 msgid "SL"
-msgstr "SL"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/index.ctp:42
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:62
-#: Plugin/Usermgmt/View/Users/view_user.ctp:62
+#: app/Plugin/Usermgmt/View/Users/index.ctp:42
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:62
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:62 to
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:42
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:62
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:62
 msgid "Email Verified"
-msgstr "Email Verifié"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/index.ctp:43
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:73
-#: Plugin/Usermgmt/View/Users/view_user.ctp:72
-#: View/Admin/admin_invoice.ctp:26
-#: View/Admin/edit.ctp:91
-#: View/Admin/orders.ctp:33
-#: View/Customer/add.ctp:125
-#: View/Customer/edit.ctp:136
-#: View/Customer/index.ctp:55
-#: View/Reseller/account.ctp:147
-#: View/Reseller/add.ctp:125
-#: View/Reseller/edit.ctp:128
-#: View/Reseller/index.ctp:43
-#: View/Reseller/order_invoice.ctp:25
+#: app/Plugin/Usermgmt/View/Users/index.ctp:43
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:73
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:72
+#: app/View/Restaurents/admin_index.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:43
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:73
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:72
+#: upload/app/View/Restaurents/admin_index.ctp:28
 msgid "Status"
-msgstr "Statut"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/index.ctp:87
-#: View/Customer/index.ctp:101
+#: app/Plugin/Usermgmt/View/Users/index.ctp:87 to
+#: upload/app/Plugin/Usermgmt/View/Users/index.ctp:87
 msgid "Are you sure you want to delete this user?"
-msgstr "Etes-vous sûr de vouloir supprimer cet utilisateur?"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/login.ctp:1;7
-#: Plugin/Usermgmt/View/Users/register.ctp:118
-msgid "Login"
-msgstr "Connexion"
-
-#: Plugin/Usermgmt/View/Users/login.ctp:24
-msgid "Remember me"
-msgstr "Se souvenir de moi"
-
-#: Plugin/Usermgmt/View/Users/login.ctp:40
-msgid "Forgot your password ? click here."
-msgstr "Mot de passe oublié? cliquez ici."
-
-msgid "Forgot your password"
-msgstr "Mot de passe oublié"
-
-#: Plugin/Usermgmt/View/Users/login.ctp:46
-#: Plugin/Usermgmt/View/Users/register.ctp:112
-msgid "Or"
-msgstr "Ou"
-
-msgid "OR"
-msgstr "OU"
-
-#: Plugin/Usermgmt/View/Users/login.ctp:50
-msgid "Become a Customer"
-msgstr "Devenez client"
-
-#: Plugin/Usermgmt/View/Users/login.ctp:52
-msgid "Please follow this link"
-msgstr "Merci de cliquer sur ce lien"
-
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:28
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:28
 msgid "My Profile"
-msgstr "Mon profil"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:38
-#: Plugin/Usermgmt/View/Users/view_user.ctp:38
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:38
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:38 to
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:38
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:38
 msgid "User Id"
-msgstr "Id de l'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/myprofile.ctp:42
-#: Plugin/Usermgmt/View/Users/view_user.ctp:42
+#: app/Plugin/Usermgmt/View/Users/myprofile.ctp:42
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:42 to
+#: upload/app/Plugin/Usermgmt/View/Users/myprofile.ctp:42
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:42
 msgid "User Group"
-msgstr "User Group"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/register.ctp:28
-msgid "Registration"
-msgstr "Inscription"
-
-#: Plugin/Usermgmt/View/Users/register.ctp:116
-msgid "Already a Customer"
-msgstr "Déjà client"
-
-#: Plugin/Usermgmt/View/Users/register.ctp:134
-msgid "Sign Up or"
-msgstr "Inscription ou"
-
-#: Plugin/Usermgmt/View/Users/register.ctp:135
-msgid "Sign In"
-msgstr "Connexion1"
-
-#: Plugin/Usermgmt/View/Users/register.ctp:188
-msgid "Sign Up"
-msgstr "Inscrivez-vous"
-
-#: Plugin/Usermgmt/View/Users/view_user.ctp:28
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:28 to
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:28
 msgid "User Detail"
-msgstr "Détail de l'utilisateur"
+msgstr ""
 
-#: Plugin/Usermgmt/View/Users/view_user.ctp:82
+#: app/Plugin/Usermgmt/View/Users/view_user.ctp:82 to
+#: upload/app/Plugin/Usermgmt/View/Users/view_user.ctp:82
 msgid "Ip Address"
-msgstr "Adresse IP"
+msgstr ""
 
-msgid "Offer"
-msgstr "Offres"
+#: app/Plugin/i18n/View/Translations/admin_add.ctp:4 to
+#: upload/app/Plugin/i18n/View/Translations/admin_add.ctp:4
+msgid "Admin Add Translation"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_add.ctp:17
+#: app/Plugin/i18n/View/Translations/admin_edit.ctp:19
+#: app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:26
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:40 to
+#: upload/app/Plugin/i18n/View/Translations/admin_add.ctp:17
+#: upload/app/Plugin/i18n/View/Translations/admin_edit.ctp:19
+#: upload/app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:26
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:40
+msgid "List Translations"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_delete.ctp:1 to
+#: upload/app/Plugin/i18n/View/Translations/admin_delete.ctp:1
+#, php-format
+msgid "Delete Translation \"%s\"?"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_delete.ctp:3 to
+#: upload/app/Plugin/i18n/View/Translations/admin_delete.ctp:3
+msgid ""
+"Be aware that your Translation and all associated data will be deleted if "
+"you confirm!"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_delete.ctp:11 to
+#: upload/app/Plugin/i18n/View/Translations/admin_delete.ctp:11
+msgid "Confirm"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_delete.ctp:13 to
+#: upload/app/Plugin/i18n/View/Translations/admin_delete.ctp:13
+msgid "You have to confirm."
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_delete.ctp:14 to
+#: upload/app/Plugin/i18n/View/Translations/admin_delete.ctp:14
+msgid "Continue"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_edit.ctp:4
+#: app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:4 to
+#: upload/app/Plugin/i18n/View/Translations/admin_edit.ctp:4
+#: upload/app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:4
+msgid "Admin Edit Translation"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:22 to
+#: upload/app/Plugin/i18n/View/Translations/admin_edit_multi.ctp:22
+msgid "Submit"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:2 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:2
+msgid "Translations"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:6 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:6
+msgid ""
+"Page {:page} of {:pages}, showing {:current} records out of {:count} total, "
+"starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:16 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:16
+msgid "Locale Name"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:19 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:19
+msgid "Model Name"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:22
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:24 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:22
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:24
+msgid "Field"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:25
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:29 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:25
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:29
+msgid "Content"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:27 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:27
+msgid "Search"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:38 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:38
+msgid "Actions"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:65 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:65
+msgid "View"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:66
+#: app/View/Langs/admin_index.ctp:49 app/View/Languages/admin_index.ctp:53
+#: app/View/Products/admin_index.ctp:59 app/View/Products/admin_index.ctp:121
+#: app/View/RestaurentTypes/admin_index.ctp:40 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:66
+msgid "Edit"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:67 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:67
+msgid "Edit All locales for this entry"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_index.ctp:78
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:41 to
+#: upload/app/Plugin/i18n/View/Translations/admin_index.ctp:78
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:41
+msgid "New Translation"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:2 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:2
+msgid "Translation"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:4 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:9 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:9
+msgid "Locale"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:14 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:14
+msgid "Model"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:19 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:19
+msgid "Foreign Key"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:38 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:38
+msgid "Edit Translation"
+msgstr ""
+
+#: app/Plugin/i18n/View/Translations/admin_view.ctp:39 to
+#: upload/app/Plugin/i18n/View/Translations/admin_view.ctp:39
+msgid "Delete Translation"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:11
+#: app/View/Elements/admin_breadcrumb.ctp:12 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:11
+#: upload/app/View/Elements/admin_breadcrumb.ctp:12
+msgid "Store Owners"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:14
+#: app/View/Elements/admin_breadcrumb.ctp:18 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:14
+#: upload/app/View/Elements/admin_breadcrumb.ctp:18
+msgid "store owners"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:15 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:15
+msgid "Add Customer"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:16 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:16
+msgid "Add store owner"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:19
+#: app/View/Elements/admin_breadcrumb.ctp:20 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:19
+#: upload/app/View/Elements/admin_breadcrumb.ctp:20
+msgid "Customer presentation"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:22 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:22
+msgid "Store list"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:23 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:23
+msgid "All stores"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:25
+#: app/View/Elements/admin_breadcrumb.ctp:26
+#: app/View/Elements/admin_breadcrumb.ctp:28
+#: app/View/Elements/admin_breadcrumb.ctp:30
+#: app/View/Elements/admin_breadcrumb.ctp:32
+#: app/View/Elements/admin_breadcrumb.ctp:34 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:25
+#: upload/app/View/Elements/admin_breadcrumb.ctp:26
+#: upload/app/View/Elements/admin_breadcrumb.ctp:28
+#: upload/app/View/Elements/admin_breadcrumb.ctp:30
+#: upload/app/View/Elements/admin_breadcrumb.ctp:32
+#: upload/app/View/Elements/admin_breadcrumb.ctp:34
+msgid "News"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:29 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:29
+msgid "Add news"
+msgstr ""
+
+#: app/View/Elements/admin_breadcrumb.ctp:33 to
+#: upload/app/View/Elements/admin_breadcrumb.ctp:33
+msgid "Edit news"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:33
+#: app/View/Restaurents/admin_index.ctp:11 to
+#: upload/app/View/Elements/admin_sidebar.ctp:33
+#: upload/app/View/Restaurents/admin_index.ctp:11
+msgid "Restaurents"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:35 to
+#: upload/app/View/Elements/admin_sidebar.ctp:35
+msgid "Add New Restaurents"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:38 to
+#: upload/app/View/Elements/admin_sidebar.ctp:38
+msgid "Enquiries"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:42 to
+#: upload/app/View/Elements/admin_sidebar.ctp:42
+msgid "For contact"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:47 to
+#: upload/app/View/Elements/admin_sidebar.ctp:47
+msgid "Customers(end user)"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:51 to
+#: upload/app/View/Elements/admin_sidebar.ctp:51
+msgid "Offers"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:58 app/View/Languages/admin_index.ctp:6
+#: app/View/Restaurents/admin_add.ctp:44
+#: app/View/Restaurents/admin_edit.ctp:45
+msgid "Languages"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:66
+#: app/View/RestaurentTypes/admin_index.ctp:6
+#: app/View/Restaurents/admin_add.ctp:71
+#: app/View/Restaurents/admin_edit.ctp:82
+msgid "Restaurent Types"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:71
+#: app/View/Elements/admin_sidebar.ctp:83 to
+#: upload/app/View/Elements/admin_sidebar.ctp:63
+#: upload/app/View/Elements/admin_sidebar.ctp:75
+msgid "Settings"
+msgstr ""
+
+#: app/View/Elements/admin_sidebar.ctp:75 to
+#: upload/app/View/Elements/admin_sidebar.ctp:67
+msgid "Terms and conditions"
+msgstr ""
+
+#: app/View/Homes/index.ctp:5
+msgid "Find Place For Fun and Eat"
+msgstr "Encontrar lugar para la diversión y Coma"
+
+#: app/View/Homes/index.ctp:10
+msgid "Restaurent Name"
+msgstr "Nombre del restaurante"
+
+#: app/View/Homes/index.ctp:11
+msgid "Enter Restaurent Name"
+msgstr "Ingrese Nombre del Restaurante"
+
+#: app/View/Homes/index.ctp:17
+msgid "Location"
+msgstr "Ubicación"
+
+#: app/View/Homes/index.ctp:19
+msgid "Enter Location"
+msgstr "Introduzca Ubicación"
+
+#: app/View/Homes/index.ctp:44
+msgid "Featured"
+msgstr "Representado"
+
+#: app/View/Homes/index.ctp:50
+msgid "Quick View"
+msgstr "Vista rápida"
+
+#: app/View/Homes/index.ctp:55 app/View/Restaurents/menu.ctp:53
+msgid "Description"
+msgstr "Descripción"
+
+#: app/View/Homes/index.ctp:92 app/View/Homes/index.ctp:158
+msgid "Restaurant"
+msgstr ""
+
+#: app/View/Homes/index.ctp:115
+msgid "Popular"
+msgstr ""
+
+#: app/View/Homes/index.ctp:184
+msgid "Why Us?"
+msgstr "¿Porque nosotros?"
+
+#: app/View/Homes/index.ctp:237
+msgid "Partners"
+msgstr "Fogonadura"
+
+#: app/View/Langs/admin_add.ctp:6 app/View/Languages/admin_add.ctp:6
+msgid "Add New Language"
+msgstr ""
+
+#: app/View/Langs/admin_add.ctp:20 app/View/Langs/admin_edit.ctp:22
+#: app/View/Languages/admin_add.ctp:20 app/View/Languages/admin_edit.ctp:22
+msgid "Language Image"
+msgstr ""
+
+#: app/View/Langs/admin_add.ctp:23 app/View/Langs/admin_edit.ctp:34
+msgid "40 * 40 size is preffered"
+msgstr ""
+
+#: app/View/Langs/admin_add.ctp:28 app/View/Langs/admin_edit.ctp:40
+#: app/View/Languages/admin_add.ctp:27 app/View/Languages/admin_edit.ctp:39
+#: app/View/Products/admin_add_category.ctp:28
+#: app/View/Products/admin_add_product.ctp:61
+#: app/View/Products/admin_edit_category.ctp:28
+#: app/View/Products/admin_edit_product.ctp:61
+#: app/View/RestaurentTypes/admin_add.ctp:18
+#: app/View/RestaurentTypes/admin_edit.ctp:19
+#: app/View/Restaurents/admin_add.ctp:92
+#: app/View/Restaurents/admin_edit.ctp:103 to
+#: upload/app/View/Restaurents/admin_add.ctp:149
+#: upload/app/View/Restaurents/admin_edit.ctp:145
+msgid "Cancel"
+msgstr ""
+
+#: app/View/Langs/admin_add.ctp:29 app/View/Langs/admin_edit.ctp:42
+#: app/View/Languages/admin_add.ctp:28 app/View/Languages/admin_edit.ctp:41
+#: app/View/Products/admin_add_category.ctp:29
+#: app/View/Products/admin_add_product.ctp:62
+#: app/View/Products/admin_edit_category.ctp:29
+#: app/View/Products/admin_edit_product.ctp:62
+#: app/View/RestaurentTypes/admin_add.ctp:19
+#: app/View/RestaurentTypes/admin_edit.ctp:20
+#: app/View/Restaurents/admin_add.ctp:93
+#: app/View/Restaurents/admin_edit.ctp:104 to
+#: upload/app/View/Restaurents/admin_add.ctp:150
+#: upload/app/View/Restaurents/admin_edit.ctp:146
+msgid "Save"
+msgstr ""
+
+#: app/View/Langs/admin_edit.ctp:6 app/View/Languages/admin_edit.ctp:6
+msgid "Update Language"
+msgstr ""
+
+#: app/View/Langs/admin_index.ctp:6 app/View/Languages/admin_index.ctp:18
+msgid "Language"
+msgstr ""
+
+#: app/View/Langs/admin_index.ctp:10 app/View/Languages/admin_index.ctp:25
+msgid "Create New Language"
+msgstr ""
+
+#: app/View/Langs/admin_index.ctp:20 app/View/Languages/admin_index.ctp:33
+#: app/View/Products/admin_index.ctp:39
+#: app/View/RestaurentTypes/admin_index.ctp:20
+msgid "No."
+msgstr ""
+
+#: app/View/Langs/admin_index.ctp:21
+msgid "Icon"
+msgstr ""
+
+#: app/View/Langs/admin_index.ctp:51 app/View/Languages/admin_index.ctp:55
+msgid "Are you sure you want to delete this language?"
+msgstr ""
+
+#: app/View/Layouts/admin.ctp:76 to upload/app/View/Layouts/admin.ctp:75
+msgid "Help"
+msgstr ""
+
+#: app/View/Layouts/admin.ctp:79 to upload/app/View/Layouts/admin.ctp:78
+msgid "Go to website"
+msgstr ""
+
+#: app/View/Layouts/admin.ctp:109 to upload/app/View/Layouts/admin.ctp:108
+msgid "View Account"
+msgstr ""
+
+#: app/View/Layouts/default.ctp:45
+msgid "Traducmeal"
+msgstr ""
+
+#: app/View/Layouts/default.ctp:84
+msgid "Sign In"
+msgstr "Registrarse"
+
+#: app/View/Layouts/default.ctp:85
+msgid "Register"
+msgstr "Registro"
+
+#: app/View/Layouts/default.ctp:88
+msgid "Submit Your Item"
+msgstr ""
+
+#: app/View/Layouts/default.ctp:112
+msgid "Navigation"
+msgstr "Navegación"
+
+#: app/View/Layouts/default.ctp:116
+msgid "Restaurent Listing"
+msgstr "Listado restaurante"
+
+#: app/View/Layouts/default.ctp:178
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"
+
+#: app/View/Products/admin_add_category.ctp:4
+msgid "Add Category"
+msgstr ""
+
+#: app/View/Products/admin_add_category.ctp:17
+#: app/View/Products/admin_add_product.ctp:23
+#: app/View/Products/admin_add_product.ctp:32
+#: app/View/Products/admin_edit_category.ctp:17
+#: app/View/Products/admin_edit_product.ctp:23
+#: app/View/Products/admin_edit_product.ctp:33
+msgid "Product"
+msgstr ""
+
+#: app/View/Products/admin_add_product.ctp:16
+#: app/View/Products/admin_edit_product.ctp:16
+msgid "New Product"
+msgstr ""
+
+#: app/View/Products/admin_add_product.ctp:24
+#: app/View/Products/admin_edit_product.ctp:24
+#: app/View/Products/admin_index.ctp:97
+msgid "Product Name"
+msgstr ""
+
+#: app/View/Products/admin_add_product.ctp:39
+#: app/View/Products/admin_edit_product.ctp:40
+#: app/View/Products/admin_index.ctp:98
+msgid "Category"
+msgstr ""
+
+#: app/View/Products/admin_add_product.ctp:48
+#: app/View/Products/admin_edit_product.ctp:49
+msgid "price"
+msgstr ""
+
+#: app/View/Products/admin_edit_category.ctp:4
+msgid "Edit Category"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:12
+msgid "Menu"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:24 to
+#: upload/app/View/Elements/admin_sidebar.ctp:58
+msgid "Categories"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:31
+msgid "Create New Category"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:61
+msgid "Are you sure you want to delete this Category?"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:84
+msgid "Products"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:89
+msgid "Create New Product"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:96
+msgid "No"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:99
+msgid "Price"
+msgstr ""
+
+#: app/View/Products/admin_index.ctp:122
+msgid "Are you sure you want to delete this product?"
+msgstr ""
+
+#: app/View/RestaurentTypes/admin_add.ctp:4
+#: app/View/RestaurentTypes/admin_edit.ctp:4
+msgid "Add Restaurent Type"
+msgstr ""
+
+#: app/View/RestaurentTypes/admin_index.ctp:12
+msgid "Add New Restuarent Type"
+msgstr ""
+
+#: app/View/RestaurentTypes/admin_index.ctp:42
+msgid "Are you sure you want to delete this Restaurent Type?"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:6 to
+#: upload/app/View/Restaurents/admin_add.ctp:81
+msgid "Add New Restaurent"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:23
+#: app/View/Restaurents/admin_edit.ctp:24 to
+#: upload/app/View/Restaurents/admin_add.ctp:98
+#: upload/app/View/Restaurents/admin_edit.ctp:99
+msgid "Geolocation"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:28
+#: app/View/Restaurents/admin_edit.ctp:29 to
+#: upload/app/View/Restaurents/admin_add.ctp:103
+#: upload/app/View/Restaurents/admin_edit.ctp:104
+msgid "Zip Code"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:33
+#: app/View/Restaurents/admin_edit.ctp:34
+#: app/View/Restaurents/admin_index.ctp:26 to
+#: upload/app/View/Restaurents/admin_add.ctp:108
+#: upload/app/View/Restaurents/admin_edit.ctp:109
+#: upload/app/View/Restaurents/admin_index.ctp:26
+msgid "City"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:38
+#: app/View/Restaurents/admin_edit.ctp:39 to
+#: upload/app/View/Restaurents/admin_add.ctp:113
+#: upload/app/View/Restaurents/admin_edit.ctp:114
+msgid "Country"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:49
+#: app/View/Restaurents/admin_edit.ctp:51 to
+#: upload/app/View/Restaurents/admin_add.ctp:118
+msgid "Resturent Image"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:61
+#: app/View/Restaurents/admin_edit.ctp:72 to
+#: upload/app/View/Restaurents/admin_add.ctp:130
+#: upload/app/View/Restaurents/admin_edit.ctp:126
+msgid "Phone Number"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:66
+#: app/View/Restaurents/admin_edit.ctp:77 to
+#: upload/app/View/Restaurents/admin_add.ctp:135
+#: upload/app/View/Restaurents/admin_edit.ctp:131
+msgid "Website"
+msgstr ""
+
+#: app/View/Restaurents/admin_add.ctp:79
+#: app/View/Restaurents/admin_edit.ctp:89
+msgid "Descriptions"
+msgstr ""
+
+#: app/View/Restaurents/admin_edit.ctp:6 to
+#: upload/app/View/Restaurents/admin_edit.ctp:81
+msgid "Update Restaurent"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:15 to
+#: upload/app/View/Restaurents/admin_index.ctp:15
+msgid "Create New Restaurent"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:24 to
+#: upload/app/View/Restaurents/admin_index.ctp:24
+msgid "Image"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:27 to
+#: upload/app/View/Restaurents/admin_index.ctp:27
+msgid "Phone"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:51 to
+#: upload/app/View/Restaurents/admin_index.ctp:43
+msgid "Active"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:51 to
+#: upload/app/View/Restaurents/admin_index.ctp:43
+msgid "Inactive"
+msgstr ""
+
+#: app/View/Restaurents/admin_index.ctp:58
+msgid "Are you sure you want to delete this category?"
+msgstr ""
+
+#: app/View/Restaurents/menu.ctp:93
+msgid "Tout"
+msgstr ""
+
+#: lib/Cake/Test/test_app/Plugin/TestPlugin/View/Elements/translate.ctp:1 to
+#: upload/lib/Cake/Test/test_app/Plugin/TestPlugin/View/Elements/translate.ctp:1
+msgid "This is a translatable string"
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:14 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:14
+msgid "Editing this Page"
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:15 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:15
+#, php-format
+msgid "You have %d new message."
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:18 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:18
+msgid "double \"quoted\""
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:19 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:19
+msgid "single 'quoted'"
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:22 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:22
+msgid ""
+"Hot features!\n"
+" - No Configuration: Set-up the database and let the magic begin\n"
+" - Extremely Simple: Just look at the name...It's Cake\n"
+" - Active, Friendly Community: Join us #cakephp on IRC. We'd love to help "
+"you get started"
+msgstr ""
+
+#: lib/Cake/Test/test_app/View/Pages/extract.ctp:34 to
+#: upload/lib/Cake/Test/test_app/View/Pages/extract.ctp:34
+msgid "letter"
+msgstr ""
+
+#: to upload/app/View/Restaurents/admin_index.ctp:48
+msgid "Are you sure you want to delete this Restaurent?"
+msgstr ""

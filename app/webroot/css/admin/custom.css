@@ -1156,3 +1156,40 @@ img.flo_left {
 .language_flag {
     max-width: 50px !important;
 }
+.main_img_container {
+    position: relative;
+    display: inline-block;
+}
+.close_btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+.close_icon {
+    position: absolute;
+    right: -10px;
+    margin-top: -28px;
+    cursor: pointer;
+    border: 0;
+    font-size: 18px;
+    color: red;
+}
+.feature_container_box {
+    margin-top: 15px;
+    display: block;
+}
+.add_feature_block {
+    font-size: 20px;
+    color: #0dcdbd;
+    border: 2px solid #0dcdbd;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+.feature_container_box:first-child {
+    margin-top: 0;
+    display: block;
+    margin-bottom: 15px;
+}

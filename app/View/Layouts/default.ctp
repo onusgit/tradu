@@ -81,15 +81,15 @@
                                     <div class="wrapper">                                       
                                         <ul class="main-navigation navigation-top-header"></ul>
                                         <ul class="user-area">
+                                            <li></li>
+                                            <?php if(empty($this->Session->read('UserAuth.User'))): ?>
                                             <li><a href="/login"><?php echo __('Sign In');?></a></li>
-                                            <li><a href="/register"><strong>Register</strong></a></li>
+                                            <?php else: ?>
+                                            <li><a href="/logout"><?php echo __('Sign Out');?></a></li>
+                                            <?php endif; ?>
+                                            <li><a href="/register"><strong><?php echo __('Register') ?></strong></a></li>
                                         </ul>
-                                        <a href="#" class="submit-item">
-                                            <div class="content"><span>Submit Your Item</span></div>
-                                            <div class="icon">
-                                                <i class="fa fa-plus"></i>
-                                            </div>
-                                        </a>
+                                        <a class="btn btn-default" href="<?php echo Router::url(array('controller' => 'pro', 'action' => 'index')) ?>"><?php echo __('Pro');?></a>
                                         <div class="toggle-navigation">
                                             <div class="icon">
                                                 <div class="line"></div>
@@ -109,11 +109,11 @@
             <div id="page-canvas">
                 <!--Off Canvas Navigation-->
                 <nav class="off-canvas-navigation">
-                    <header>Navigation</header>
+                    <header><?php echo __('Navigation') ?></header>
                     <div class="main-navigation navigation-off-canvas">
                         <ul>
-                            <li><a href="<?php echo FULL_BASE_URL ?>">Home</a></li>
-                            <li><a href="<?php echo Router::url(array('controller'=> 'restaurents', 'action' => 'index')) ?>">Restaurent Listing </a></li>
+                            <li><a href="<?php echo FULL_BASE_URL ?>"><?php echo __('Home') ?></a></li>
+                            <li><a href="<?php echo Router::url(array('controller'=> 'restaurents', 'action' => 'index')) ?>"><?php echo __('Restaurent Listing') ?> </a></li>
                        </ul>
                     </div>
                 </nav>
@@ -175,7 +175,7 @@
                     <!--/.footer-top-->
                     <div class="footer-bottom">
                         <div class="container">
-                            <span class="left">(C) Traducmeal, All rights reserved</span>
+                            <span class="left">(C) Traducmeal, <?php echo __('All rights reserved') ?></span>
                             <span class="right">
                                 <a href="#page-top" class="to-top roll"><i class="fa fa-angle-up"></i></a>
                             </span>

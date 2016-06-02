@@ -43,22 +43,14 @@
                                 </figure>
                             </address>
                         </section>
-                        <!--end Contact-->
-                        <!--Rating-->
-                        <section class="clearfix">
-                            <header class="pull-left"><a href="#reviews" class="roll"><h3>Rating</h3></a></header>
-                            <figure class="rating big pull-right" data-rating="<?php echo rand(1, 5) ?>"></figure>
-                        </section>
-                        <!--end Rating-->
-
-
+                        <!--end Contact-->                    
                     </aside>
                     <!--end Detail Sidebar-->
                     <!--Content-->
                     <div class="col-md-8 col-sm-8">
                         <section>                            
                             <article class="block padding-0">
-                                <header><h2>Description</h2></header>
+                                <header><h2><?php echo __('Description') ?></h2></header>
                                 <p>
                                     <?php echo $restaurent['Restaurent']['descriptions'] ?>
                                 </p>
@@ -100,7 +92,11 @@
                         <div class="row category_row simplefilter" id="filters">
                             <li class="category_filter active" data-filter="*"><?php echo __('Tout'); ?></li>
                             <?php foreach ($restaurent_categories as $k => $category): ?>
-                                <li class="category_filter" data-filter=".cat_<?php echo $category['Category']['id'] ?>"><?php echo $category['Category']['name']; ?></li>
+                                <li class="category_filter" data-filter=".cat_<?php echo $category['Category']['id'] ?>"> 
+                                <?php foreach( $category['CategoryLanguage'] as $k => $cat_lang): ?>
+                                    <span class="category_name" data-id="<?php echo $cat_lang['language_id'] ?>" > <?php echo $cat_lang['name'] ?> </span>
+                                <?php endforeach; ?>
+                                </li>
                             <?php endforeach; ?> 
                         </div>
                     </div>
@@ -133,11 +129,19 @@
                         <div id="portfolio_container" class="col-md-8 resturent_menu_container filtr-container">
                             <?php foreach ($data as $k => $d): ?>
                                 <div class="col-md-12 col-sm-12 col-xs-12 menu_row filtr-item item cat_<?php echo $d['product_categry']['Category']['id'] ?>" data-category="cat_<?php echo $d['product_categry']['Category']['id'] ?>">
-                                    <h2 class="category_title">
-                                        <?php echo $d['product_categry']['Category']['name'] ?>
-                                    </h2>
+                                   
+                                        <?php 
+                                            if(!empty($d['product_categry']['CategoryLanguage'])):
+                                                foreach($d['product_categry']['CategoryLanguage'] as $cat_lang):
+                                                ?>
+                                                     <h2 class="category_title" data-id="<?php echo $cat_lang['language_id'] ?>"><?php echo $cat_lang['name'];?></h2>
+                                            <?php 
+                                                endforeach;
+                                            endif; 
+                                        ?>
+                                        <?php //echo $d['product_categry']['Category']['name'] ?>
                                     
-                                    <?php pr($d) ?>
+                                    
 
                                     <?php
                                     if (!empty($d['products'])):
@@ -250,6 +254,12 @@
     .menu_language{
         display: none;
     }
+    .category_title{
+        display: none;
+    }
+    .category_name{
+        display: none;
+    }
     .resturent_menu_container {
         height: auto !important;
     }
@@ -346,9 +356,19 @@ echo $this->Html->script('isotope.pkgd.js');
             $('.menu_name.menu_language:empty').hide();
             $('.menu_name.menu_language:empty').next($('.menu_price')).hide();
             $(this).closest('.lang_selector').addClass('active');
+            
+            $('.category_title').hide();
+            $('.category_title[data-id = ' + lang_id + ' ]').fadeToggle();
+            $('.category_title:empty').hide();
+            
+            $('.category_name').hide();
+            $('.category_name[data-id = ' + lang_id + ' ]').fadeToggle();
+            $('.category_name:empty').hide();
         });
 
         $('.menu_name.menu_language[data-id = "<?php echo $default_lang; ?>"]').fadeToggle();
+        $('.category_title[data-id = "<?php echo $default_lang; ?>"]').fadeToggle();
+        $('.category_name[data-id = "<?php echo $default_lang; ?>"]').fadeToggle();
     });
 </script>
 <?php

@@ -43,7 +43,7 @@
                             
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Languages'); ?><span class="require">*</span></label>
                                 <div class="col-lg-9">
-                                    <?php echo $this->Form->input('restaurent_languages', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox')); ?>
+                                    <?php echo $this->Form->input('languages', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox')); ?>
                                 </div>
                             </div>
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Resturent Image'); ?></label>
@@ -67,7 +67,12 @@
                                 <div class="col-lg-9">
                                     <?php echo $this->Form->input('website', array('class' => 'form-control', 'label' => FALSE, 'div' => FALSE, 'placeholder' => '')); ?>
                                 </div>
-                            </div>			    			    
+                            </div>
+                            <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Restaurent Types'); ?><span class="require">*</span></label>
+                                <div class="col-lg-9">
+                                    <?php echo $this->Form->input('types', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $restaurent_types, 'multiple' => 'checkbox')); ?>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-8"> 

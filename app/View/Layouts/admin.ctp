@@ -70,11 +70,7 @@ $user = $this->Session->read('UserAuth.User');
                     <a id="menu-toggle" href="#" class="btn hidden-xs">
                         <i class="fa fa-bars"></i>
                     </a>                                
-                    <ul class="nav navbar-top-links navbar-right">
-
-                        <li>
-                            <a target="_blank" href="//docs.makemevip.info/" class="btn btn-default admin-menu-btn"><?php echo __('Help'); ?>&nbsp;&nbsp;<i class="fa fa-question text-blue"></i></a>
-                        </li>
+                    <ul class="nav navbar-top-links navbar-right">                        
                         <li>
                             <a target="_blank" href="/" class="btn btn-default admin-menu-btn"><?php echo __('Go to website'); ?>&nbsp;&nbsp;<i class="fa fa-mail-forward text-orange"></i></a>
                         </li>

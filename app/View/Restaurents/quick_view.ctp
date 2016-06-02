@@ -15,7 +15,6 @@
                 <figure>
                     <?php echo $restaurent['Restaurent']['address']; ?>
                 </figure>
-                <div class="rating" data-rating="<?php echo rand(1, 5) ?>"></div>
                 <div class="modal-body">
                     <div class="gallery">
                         <div class="image">

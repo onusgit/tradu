@@ -35,30 +35,22 @@
             <li><?php echo $this->Html->link('<i class="fa fa-plus fa-fw"></i><span class="menu-title">' . __('Add New Restaurents'), array('controller' => 'restaurents', 'action' => 'admin_add'), array('escape' => false)); ?></li>            
        
         <?php if($login_user_group_id == 1): ?>
-            <li class="sidebar-heading"><h4><?php echo __('Enquiries'); ?></h4></li>    
+            <!--<li class="sidebar-heading"><h4><?php echo __('Enquiries'); ?></h4></li>    
             <li class="padding-left-25 <?php if ($this->request->controller == "enquiries" && $this->request->action == 'index' && $this->request->pass[0] == 'contact') {
                     echo "highlight-menu ";
                 } ?>">
                 <?php echo $this->Html->link('<i class="fa fa-phone-square"></i> ' . __('For contact'), array('controller' => 'enquiries', 'action' => 'admin_index', 'contact'), array('escape' => false)); ?>
-            </li>               
+            </li>-->               
         <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
-            <li class=""><?php echo $this->Html->link('<i class="fa fa-group fa-fw"></i><span class="menu-title">' . __('Customers(end user)'), array('controller' => 'customers', 'action' => 'admin_show_user', 'enduser'), array('escape' => false)); ?></li>            
+            <!-- <li class=""><?php echo $this->Html->link('<i class="fa fa-group fa-fw"></i><span class="menu-title">' . __('Customers(end user)'), array('controller' => 'customers', 'action' => 'admin_show_user', 'enduser'), array('escape' => false)); ?></li> -->            
       <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
-            <li class=""><?php echo $this->Html->link('<i class="fa fa-tags fa-fw"></i><span class="menu-title">' . __('Offers'), array('controller' => 'offers', 'action' => 'admin_index'), array('escape' => false)); ?></li>            
-        <?php endif; ?>
-         
-        <?php if($login_user_group_id == 1): ?>    
-            <li class="<?php if ($this->request->controller == "Categories" && in_array($this->request->action, array('index', 'add', 'edit'))) {
-                    echo "active";
-                } ?>">
-                <?php echo $this->Html->link('<i class="fa fa-list-ul"></i> ' . __('Categories'), array('controller' => 'categories', 'action' => 'admin_index'), array('escape' => false)); ?>
-            </li>
-        <?php endif; ?>
-            
+            <!-- <li class=""><?php echo $this->Html->link('<i class="fa fa-tags fa-fw"></i><span class="menu-title">' . __('Offers'), array('controller' => 'offers', 'action' => 'admin_index'), array('escape' => false)); ?></li> -->            
+        <?php endif; ?>    
+       
         <?php if($login_user_group_id == 1): ?>    
             <li class="<?php if ($this->request->controller == "langs" && in_array($this->request->action, array('index', 'add', 'edit'))) {
                     echo "active";
@@ -68,20 +60,42 @@
         <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
-            <li class="sidebar-heading"><h4><?php echo __('Settings'); ?></h4></li>   
-            <li class="padding-left-25 <?php if ($this->request->controller == "page_settings") {
+            <li class="<?php if ($this->request->controller == "offers" && in_array($this->request->action, array('admin_index', 'admin_add', 'admin_edit'))) {
                     echo "active";
                 } ?>">
-                <?php echo $this->Html->link('<i class="fa fa-gear"></i><span class="menu-title"> ' . __('Terms and conditions') . '</span>', array('controller' => 'page_settings', 'action' => 'terms_edit'), array('escape' => false)); ?>
+                <?php echo $this->Html->link('<i class="fa fa-tags"></i> ' . __('Offers'), array('controller' => 'offers', 'action' => 'admin_index'), array('escape' => false)); ?>
+            </li>
+        <?php endif; ?>
+            
+        <?php if($login_user_group_id == 1): ?>    
+            <li class="<?php if ($this->request->controller == "restaurent_types" && in_array($this->request->action, array('add', 'edit'))) {
+                    echo "active";
+                } ?>">
+                <?php echo $this->Html->link('<i class="fa fa-list"></i> ' . __('Restaurent Types'), array('controller' => 'restaurent_types', 'action' => 'admin_index'), array('escape' => false)); ?>
+            </li>
+        <?php endif; ?>
+            
+        <?php if($login_user_group_id == 1): ?>    
+            <li class="sidebar-heading"><h4><?php echo __('Settings'); ?></h4></li>   
+            <li class="padding-left-25 <?php if ($this->request->controller == "settings" && in_array($this->request->action, array('admin_main_picture', 'admin_add_main_picture', 'admin_edit_main_picture'))) {
+                    echo "active";
+                } ?>">
+                <?php echo $this->Html->link('<i class="fa fa-gear"></i><span class="menu-title"> ' . __('Main Image') . '</span>', array('controller' => 'settings', 'action' => 'admin_main_picture'), array('escape' => false)); ?>
+            </li> 
+            
+            <li class="padding-left-25 <?php if ($this->request->controller == "settings" && in_array($this->request->action, array('admin_featured_picture', 'admin_add_featured_picture', 'admin_edit_featured_picture'))) {
+                    echo "active";
+                } ?>">
+                <?php echo $this->Html->link('<i class="fa fa-gear"></i><span class="menu-title"> ' . __('Featured Image') . '</span>', array('controller' => 'settings', 'action' => 'admin_featured_picture'), array('escape' => false)); ?>
             </li> 
         <?php endif; ?>
             
         <?php if($login_user_group_id == 1): ?>    
-            <li class="padding-left-25 <?php if ($this->request->controller == "application" && in_array($this->request->action, array('get_application'))) {
+            <!--<li class="padding-left-25 <?php if ($this->request->controller == "application" && in_array($this->request->action, array('get_application'))) {
                     echo "active";
                 } ?>">
                 <?php echo $this->Html->link('<i class="fa fa-gear"></i><span class="menu-title"> ' . __('Settings') . '</span>', array('controller' => 'settings', 'action' => 'admin_index'), array('escape' => false)); ?>
-            </li>
+            </li> -->
         <?php endif; ?>
     </ul>
 </div>

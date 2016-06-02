@@ -39,7 +39,7 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
             zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.LARGE,
-                position: google.maps.ControlPosition.RIGHT_TOP
+                position: google.maps.ControlPosition.RIGHT_CENTER
             }
         };
         var mapElement = document.getElementById('map');
@@ -48,8 +48,9 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
         var markerClicked = 0;
         var activeMarker = false;
         var lastClicked = false;
-
-        for (var i = 0; i < json.data.length; i++) {
+        
+        if(json.data){
+            for (var i = 0; i < json.data.length; i++) {
 
             // Google map marker content -----------------------------------------------------------------------------------
 
@@ -142,6 +143,7 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
                 }
             })(marker, i));
         }
+        }
 
         // Close infobox after click on map --------------------------------------------------------------------------------
 
@@ -189,7 +191,8 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
 
         google.maps.event.addListener(map, 'idle', function() {
             var visibleArray = [];
-            for (var i = 0; i < json.data.length; i++) {
+            if(json.data){
+                for (var i = 0; i < json.data.length; i++) {
                 if ( map.getBounds().contains(newMarkers[i].getPosition()) ){
                     visibleArray.push(newMarkers[i]);
                     $.each( visibleArray, function (i) {
@@ -208,27 +211,30 @@ function createHomepageGoogleMap(_latitude,_longitude,json){
                     newMarkers[i].setMap(null);
                 }
             }
+            }
 
             var visibleItemsArray = [];
-            $.each(json.data, function(a) {
-                if( map.getBounds().contains( new google.maps.LatLng( json.data[a].latitude, json.data[a].longitude ) ) ) {
-                    var category = json.data[a].category;
-                    pushItemsToArray(json, a, category, visibleItemsArray);
-                }
-            });
+            if(json.data){
+                $.each(json.data, function(a) {
+                    if( map.getBounds().contains( new google.maps.LatLng( json.data[a].latitude, json.data[a].longitude ) ) ) {
+                        var category = json.data[a].category;
+                        pushItemsToArray(json, a, category, visibleItemsArray);
+                    }
+                });
+            }
 
             // Create list of items in Results sidebar ---------------------------------------------------------------------
 
             $('.items-list .results').html( visibleItemsArray );
 
             // Check if images are cached, so will not be loaded again
-
-            $.each(json.data, function(a) {
-                if( map.getBounds().contains( new google.maps.LatLng( json.data[a].latitude, json.data[a].longitude ) ) ) {
-                    is_cached(json.data[a].img ,a);
-                }
-            });
-
+            if(json.data){
+                $.each(json.data, function(a) {
+                    if( map.getBounds().contains( new google.maps.LatLng( json.data[a].latitude, json.data[a].longitude ) ) ) {
+                        is_cached(json.data[a].img ,a);
+                    }
+                });
+            }
             // Call Rating function ----------------------------------------------------------------------------------------
 
             rating('.results .item');
@@ -597,7 +603,7 @@ function pushItemsToArray(json, a, category, visibleItemsArray){
     visibleItemsArray.push(
         '<li>' +
             '<div class="item" id="' + json.data[a].id + '">' +
-                '<a href="#" class="image">' +
+                '<a href="' + json.data[a].url + '" class="image">' +
                     '<div class="inner">' +
                         '<div class="item-specific">' +
                             //drawItemSpecific(category, json, a) +
@@ -606,9 +612,8 @@ function pushItemsToArray(json, a, category, visibleItemsArray){
                     '</div>' +
                 '</a>' +
                 '<div class="wrapper">' +
-                    '<a href="#" id="' + json.data[a].id + '"><h3>' + json.data[a].title + '</h3></a>' +
+                    '<a href="' + json.data[a].url + '" id="' + json.data[a].id + '"><h3>' + json.data[a].title + '</h3></a>' +
                     '<figure>' + json.data[a].location + '</figure>' +
-                    drawPrice(json.data[a].price) +
                     '<div class="info">' +
                         '<div class="type">' +
                             '<i><img src="' + json.data[a].type_icon + '" alt=""></i>' +

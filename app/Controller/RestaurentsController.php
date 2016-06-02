@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 
 class RestaurentsController extends AppController {
 
-    public $uses = array('Restaurent', 'Category', 'Menu', 'Language', 'MenuLanguage', 'Country', 'CategoryLanguage');
+    public $uses = array('Restaurent', 'Category', 'Menu', 'Language', 'MenuLanguage', 'Country', 'CategoryLanguage', 'RestaurentType');
 
     public function admin_index() {
         $restaurents = $this->Restaurent->find('all');
@@ -14,13 +14,18 @@ class RestaurentsController extends AppController {
     public function admin_add() {
         $countries = $this->Country->find('list', array('fields' => array('id', 'country_name')));
         $languages = $this->Language->find('list', array('fields' => array('id', 'name')));
-        $this->set(compact('countries', 'languages'));
+        $restaurent_types = $this->RestaurentType->find('list', array('fields' => array('id', 'name')));
+        $this->set(compact('countries', 'languages', 'restaurent_types'));
         if ($this->request->is('post')):
             if (!empty($this->request->data)):
                 $this->Restaurent->set($this->request->data);
 //                if ($this->Restaurent->validates()):
-                $l_string = implode(',', $this->request->data['Restaurent']['language']);
+                $l_string = implode(',', $this->request->data['Restaurent']['languages']);
                 $this->request->data['Restaurent']['restaurent_languages'] = $l_string;
+
+                $type_string = implode(',', $this->request->data['Restaurent']['types']);
+                $this->request->data['Restaurent']['restaurent_types'] = $type_string;
+
                 $success = $this->Restaurent->save($this->request->data['Restaurent']);
                 if (!empty($this->request->data['Restaurent']['image']['tmp_name'])):
                     $file_name = $this->request->data['Restaurent']['image']['name'];
@@ -42,10 +47,10 @@ class RestaurentsController extends AppController {
                     endif;
                 endif;
                 if ($success):
-                    $this->Session->setFlash('Store Added Successfully');
+                    $this->Session->setFlash('Restaurent Added Successfully');
                     $this->redirect(array('controller' => 'Restaurents', 'action' => 'admin_index'));
                 else:
-                    $this->Session->setFlash('Store Not Added Successfully');
+                    $this->Session->setFlash('Restaurent Not Added Successfully');
                     $this->redirect(array('controller' => 'Restaurents', 'action' => 'admin_index'));
                 endif;
 //                else:
@@ -57,7 +62,44 @@ class RestaurentsController extends AppController {
     }
 
     public function index() {
-        $restaurents = $this->Restaurent->find('all');
+        $conditions = [];
+        $latitude = 48.858385;
+        $longitude = 2.350088;
+        $rest_name = '';
+        $rest_address = '';
+        $rest_type = '';
+        $order = array('name ASC');
+        if ($this->request->is(array('post', 'get', 'ajax'))):
+            if (!empty($this->request->data['Rest']['name'])):
+                $rest_name = $this->request->data['Rest']['name'];
+                $conditions[] = array('Restaurent.name LIKE' => '%' . $rest_name . '%');
+            endif;
+
+            if (!empty($this->request->data['Rest']['type'])):
+                $rest_type = implode(',', $this->request->data['Rest']['type']);
+            endif;
+
+            if (!empty($this->request->data['Rest']['rest_type'])):
+                $rest_type = $this->request->data['Rest']['rest_type'];
+            endif;
+
+            if (!empty($this->request->data['Rest']['lat'])):
+                $latitude = $this->request->data['Rest']['lat'];
+                $longitude = $this->request->data['Rest']['lng'];
+                $this->Restaurent->virtualFields = array(
+                    'distance' => "(((acos(sin(($latitude*pi()/180)) 
+                                                          * sin((Restaurent.latitude*pi()/180))
+                                                          + cos(($latitude*pi()/180)) * cos((Restaurent.latitude*pi()/180))
+                                                          * cos((($longitude - Restaurent.longitude)*pi()/180))))*180/pi())*60*1.1515*1.609344)",
+                );
+                $rest_address = $this->request->data['Rest']['address'];
+                //$conditions[] = array('Restaurent.distance' => '< 20');
+                $order = array('distance ASC');
+            endif;
+        endif;
+        $restaurents = $this->Restaurent->find('all', array('conditions' => $conditions, 'order' => $order));
+
+        $restaurent_types = $this->RestaurentType->find('all', array('fields' => array('id', 'name')));
         foreach ($restaurents as $k => $r):
             $data[$k]['id'] = $r['Restaurent']['id'];
             $data[$k]['color'] = '#000';
@@ -70,14 +112,28 @@ class RestaurentsController extends AppController {
             $data[$k]['location'] = $r['Restaurent']['address'];
             $data[$k]['latitude'] = $r['Restaurent']['latitude'];
             $data[$k]['longitude'] = $r['Restaurent']['longitude'];
+            $data[$k]['rest_types'] = explode(",", $r['Restaurent']['restaurent_types']);
         endforeach;
+
+        if (!empty($this->request->data['Rest']['type']) || !empty($this->request->data['Rest']['rest_type'])):
+            $r_types = explode(',', $rest_type);
+            $data1 = [];
+            foreach ($data as $key => $d):                
+                if (array_intersect($r_types, $d['rest_types'])):
+                    $data1[] = $d;
+                endif;
+            endforeach;
+            $data = $data1;            
+        endif;
+        
         if (!empty($data)):
             $status = 1;
         else:
             $status = 0;
         endif;
-        $this->set(compact('restaurents', 'data', 'status'));
-        $this->set('_serialize', array('data', 'status'));
+        //pr($data1);
+        $this->set(compact('restaurents', 'data', 'status', 'rest_name', 'latitude', 'longitude', 'restaurent_types', 'rest_address', 'rest_type', 'conditions'));
+        $this->set('_serialize', array('data', 'status', 'conditions'));
     }
 
     public function admin_edit($restaurent_id = null) {
@@ -87,14 +143,21 @@ class RestaurentsController extends AppController {
                 //pr($restaurent);die;               
                 $countries = $this->Country->find('list', array('fields' => array('id', 'country_name')));
                 $languages = $this->Language->find('list', array('fields' => array('id', 'name')));
-                $restaurent_languages = explode(',', $restaurent['Restaurent']['restaurent_languages']);
-                $this->set(compact('countries', 'languages', 'restaurent_languages'));
+                $restaurent_types = $this->RestaurentType->find('list', array('fields' => array('id', 'name')));
+                $restaurent_languages = explode(',', $restaurent['Restaurent']['restaurent_types']);
+                $rest_type = explode(',', $restaurent['Restaurent']['restaurent_types']);
+
+                $this->set(compact('countries', 'languages', 'restaurent_languages', 'restaurent_types', 'rest_type'));
                 if ($this->request->is(array('post', 'put'))):
                     if (!empty($this->request->data)):
                         $this->Restaurent->set($this->request->data['Restaurent']);
 //                        if ($this->Restaurent->RestaurentValidate()):
-                        $l_string = implode(',', $this->request->data['Restaurent']['language']);
+                        $l_string = implode(',', $this->request->data['Restaurent']['languages']);
                         $this->request->data['Restaurent']['restaurent_languages'] = $l_string;
+
+                        $type_string = implode(',', $this->request->data['Restaurent']['types']);
+                        $this->request->data['Restaurent']['restaurent_types'] = $type_string;
+
                         $this->Restaurent->id = $restaurent_id;
                         $success = $this->Restaurent->save($this->request->data['Restaurent']);
 
@@ -176,46 +239,33 @@ class RestaurentsController extends AppController {
         exit();
     }
 
-    public function view($restaurent_id = null) {
+    public function menu($restaurent_id = null) {
         if (!empty($restaurent_id)):
-            $this->Restaurent->bindModel( array( 'hasMany' => array( 'Category' => array( 'foriegnKey' => 'restaurent_id' ) ) ) );
-            $restaurent = $this->Restaurent->find('first', array('conditions' => array( 'Restaurent.id' => $restaurent_id ) ) );
+
+            $this->Restaurent->bindModel(array('hasMany' => array('Category' => array('foriegnKey' => 'restaurent_id')), 'belongsTo' => array('Country' => array('foriegnKey' => 'country_id'))));
+            $restaurent = $this->Restaurent->find('first', array('conditions' => array('Restaurent.id' => $restaurent_id)));
+            $this->Category->bindModel(array('hasMany' => array('CategoryLanguage' => array('foriegnKey' => 'id'))));
+            $restaurent_categories = $this->Category->find('all', array('recursive' => 2, 'conditions' => array('restaurent_id' => $restaurent_id)));
+
+            $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id'))));
+            $restaurent_menu = $this->Menu->find('all', array('conditions' => array('Menu.restaurent_id' => $restaurent_id), 'ORDER' => 'Category.id'));
+            $restaurent_languages = explode(',', $restaurent['Restaurent']['restaurent_languages']);
+            $languages = $this->Language->find('all', array('conditions' => array('Language.id' => $restaurent_languages)));
+            if (!empty($restaurent_categories)):
+                foreach ($restaurent_categories as $k => $v):
+                    $data[$k]['product_categry'] = $v;
+                    $this->Category->bindModel(array('hasMany' => array('CategoryLanguage' => array('foriegnKey' => 'id'))));
+                    $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id')), 'hasMany' => array('MenuLanguage' => array('foriegnKey' => 'id'))));
+                    $restaurent_menu = $this->Menu->find('all', array('recursive' => 2, 'conditions' => array('Menu.restaurent_id' => $restaurent_id, 'Menu.category_id' => $v['Category']['id']), 'ORDER' => 'Category.id'));
+                    $data[$k]['products'] = $restaurent_menu;
+                endforeach;
+            endif;
+            $default_lang = 2;
         else:
             $this->Session->setFlash('No Data Found.');
             $this->redirect(FULL_BASE_URL);
         endif;
-        $this->set(compact('restaurent'));
-    }
 
-    public function menu($restaurent_id = null) {
-//        $this->Category->bindModel(array( 'hasMany' => array( 'CategoryLanguage' => array('foriegnKey' => 'id') ) ));
-//        $a = $this->Category->findById(9);
-//        pr($a);
-//        die;
-        if(!empty($restaurent_id)):
-        
-        $this->Restaurent->bindModel( array( 'hasMany' => array( 'Category' => array( 'foriegnKey' => 'restaurent_id' ) ), 'belongsTo' => array( 'Country' => array( 'foriegnKey' => 'country_id' ) ) ) );
-        $restaurent = $this->Restaurent->find('first', array('conditions' => array( 'Restaurent.id' => $restaurent_id ) ) );
-        $restaurent_categories = $this->Category->find('all', array('conditions' => array('restaurent_id' => $restaurent_id)));
-        $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id'))));
-        $restaurent_menu = $this->Menu->find('all', array('conditions' => array('Menu.restaurent_id' => $restaurent_id), 'ORDER' => 'Category.id'));
-        $restaurent_languages = explode(',', $restaurent['Restaurent']['restaurent_languages']);
-        $languages = $this->Language->find('all', array( 'conditions' => array( 'Language.id' => $restaurent_languages ) ));
-        if (!empty($restaurent_categories)):
-            foreach ($restaurent_categories as $k => $v):
-                $data[$k]['product_categry'] = $v;
-                $this->Category->bindModel(array( 'hasMany' => array( 'CategoryLanguage' => array('foriegnKey' => 'id') ) ));
-                $this->Menu->bindModel(array('belongsTo' => array('Category' => array('foriegnKey' => 'category_id')), 'hasMany' => array('MenuLanguage' => array('foriegnKey' => 'id'))));
-                $restaurent_menu = $this->Menu->find('all', array('recursive' => 2, 'conditions' => array('Menu.restaurent_id' => $restaurent_id, 'Menu.category_id' => $v['Category']['id']), 'ORDER' => 'Category.id'));
-                $data[$k]['products'] = $restaurent_menu;
-            endforeach;
-        endif;
-        $default_lang = 1;
-          else:
-            $this->Session->setFlash('No Data Found.');
-            $this->redirect(FULL_BASE_URL);
-        endif;
-      
         $this->set(compact('restaurent_categories', 'restaurent_menu', 'data', 'languages', 'default_lang', 'restaurent'));
     }
 

@@ -44,7 +44,7 @@
                             
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Languages'); ?><span class="require">*</span></label>
                                 <div class="col-lg-9">
-                                    <?php echo $this->Form->input('language', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox', 'selected' => $restaurent_languages)); ?>
+                                    <?php echo $this->Form->input('languages', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $languages, 'multiple' => 'checkbox', 'selected' => $restaurent_languages)); ?>
                                 </div>
                             </div>
                             
@@ -78,7 +78,12 @@
                                 <div class="col-lg-9">
                                     <?php echo $this->Form->input('website', array('class' => 'form-control', 'label' => FALSE, 'div' => FALSE, 'placeholder' => '')); ?>
                                 </div>
-                            </div>			    			    
+                            </div>
+                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Restaurent Types'); ?></label>
+                                <div class="col-lg-9">
+                                    <?php echo $this->Form->input('types', array('class' => 'form-control required', 'label' => FALSE, 'id' => 'language', 'div' => FALSE, 'placeholder' => '', 'options' => $restaurent_types, 'multiple' => 'checkbox', 'selected' => $rest_type)); ?>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-sm-8"> 
                             <div class="form-group"><label class="col-lg-3 control-label"><?php echo __('Descriptions'); ?></label>
