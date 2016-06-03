@@ -237,3 +237,11 @@ img.icon {
     padding: 245px 0;
     overflow: hidden;
 }
+.focus div p {
+    color: #000;
+}
+
+.header .container-fluid .wrapper a.btn-default{
+    border-radius: 10px;
+    padding: 5px 15px;
+}
